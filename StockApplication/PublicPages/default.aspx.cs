@@ -13,5 +13,25 @@ namespace StockApplication.PublicPages
         {
 
         }
+
+        protected void btn_login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_stf_login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_signup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_svrc_dir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.StaffPages._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="StockApplication.PublicPages.login" %>
 
 <!DOCTYPE html>
 
@@ -8,10 +8,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="height: 357px">
             <div align="center">
             <span style="display:block; height: 100px; width: 50px;"></span>
-            Staff Login Page:
+            Member Login Page:
             <span style="display:block; height: 26px; width: 50px;"></span>
             Email Address:
             <span style="display:block; height: 5px; width: 50px;"></span>
@@ -21,8 +21,9 @@
             <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:TextBox ID="txt_pass" runat="server" Width="220px"  ></asp:TextBox>
             <span style="display:block; height: 23px; width: 50px;"></span>
-            <asp:Button ID="btn_stf_login"  runat="server" Text="Staff Login"  Height="44px" Width="139px" OnClick="btn_stf_login_Click" ></asp:Button>
+            <asp:Button ID="btn_mber_login"  runat="server" Text="Member Login"  Height="44px" Width="139px" OnClick="btn_mber_login_Click" ></asp:Button>
             <span style="display:block; height: 5px; width: 50px;"></span>
+            </div>
         </div>
     </form>
 </body>

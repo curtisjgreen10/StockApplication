@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StockApplication.StaffPages {
+namespace StockApplication.MemberPages {
     
     
-    public partial class _default {
+    public partial class accountInformation {
         
         /// <summary>
         /// form1 control.
@@ -28,7 +28,7 @@ namespace StockApplication.StaffPages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_email;
+        protected global::System.Web.UI.WebControls.Label txt_email;
         
         /// <summary>
         /// txt_pass control.
@@ -37,15 +37,6 @@ namespace StockApplication.StaffPages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pass;
-        
-        /// <summary>
-        /// btn_stf_login control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_stf_login;
+        protected global::System.Web.UI.WebControls.Label txt_pass;
     }
 }

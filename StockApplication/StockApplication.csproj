@@ -71,14 +71,25 @@
     <Content Include="Member.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="MemberPages\accountInformation.aspx" />
     <Content Include="MemberPages\memberPage.aspx" />
     <Content Include="PublicPages\default.aspx" />
+    <Content Include="PublicPages\login.aspx" />
+    <Content Include="PublicPages\serviceDirectory.aspx" />
+    <Content Include="PublicPages\staffLogin.aspx" />
     <Content Include="StaffPages\staffPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPages\accountInformation.aspx.cs">
+      <DependentUpon>accountInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberPages\accountInformation.aspx.designer.cs">
+      <DependentUpon>accountInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="MemberPages\memberPage.aspx.cs">
       <DependentUpon>memberPage.aspx</DependentUpon>
@@ -94,6 +105,27 @@
     </Compile>
     <Compile Include="PublicPages\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicPages\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicPages\serviceDirectory.aspx.cs">
+      <DependentUpon>serviceDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPages\serviceDirectory.aspx.designer.cs">
+      <DependentUpon>serviceDirectory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicPages\staffLogin.aspx.cs">
+      <DependentUpon>staffLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPages\staffLogin.aspx.designer.cs">
+      <DependentUpon>staffLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffPages\staffPage.aspx.cs">
       <DependentUpon>staffPage.aspx</DependentUpon>

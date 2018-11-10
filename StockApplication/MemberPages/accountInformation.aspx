@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.StaffPages._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accountInformation.aspx.cs" Inherits="StockApplication.MemberPages.accountInformation" %>
 
 <!DOCTYPE html>
 
@@ -9,20 +9,21 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div align="center">
+
+             <div align="center">
             <span style="display:block; height: 100px; width: 50px;"></span>
-            Staff Login Page:
+            Account Information Page:
             <span style="display:block; height: 26px; width: 50px;"></span>
             Email Address:
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:TextBox ID="txt_email" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:Label ID="txt_email" Text="USER EMAIL" runat="server" Width="220px"  ></asp:Label>
             <span style="display:block; height: 15px; width: 50px;"></span>
             Password:
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:TextBox ID="txt_pass" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:Label ID="txt_pass" Text="********" runat="server" Width="220px"  ></asp:Label>
             <span style="display:block; height: 23px; width: 50px;"></span>
-            <asp:Button ID="btn_stf_login"  runat="server" Text="Staff Login"  Height="44px" Width="139px" OnClick="btn_stf_login_Click" ></asp:Button>
-            <span style="display:block; height: 5px; width: 50px;"></span>
+            </div>
+
         </div>
     </form>
 </body>

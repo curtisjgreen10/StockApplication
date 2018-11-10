@@ -5,16 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace StockApplication.StaffPages
+namespace StockApplication.PublicPages
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class serviceDirectory : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btn_stf_login_Click(object sender, EventArgs e)
         {
 
         }
