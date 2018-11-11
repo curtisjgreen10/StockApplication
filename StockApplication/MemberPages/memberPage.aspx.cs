@@ -13,5 +13,30 @@ namespace StockApplication.MemberPages
         {
 
         }
+
+        protected void btn_go_Click(object sender, EventArgs e)
+        {
+            //create proxy
+            StockService.StockServiceClient proxy = new StockService.StockServiceClient();
+            try
+            {
+                //method call through proxy
+                proxy.StockBuild("does not matter");
+                string data = proxy.StockQuote(txt_symbol.Text);
+                string[] stats = data.Split(',');
+                txt_open.Text = "$" + stats[0];
+                txt_high.Text = "$" + stats[1];
+                txt_low.Text = "$" + stats[2];
+                txt_close.Text = "$" + stats[3];
+            }
+            catch (Exception ex)
+            {
+                //display any exception messages in txt_open text box
+                txt_open.Text = "no data or invalid stock or other error";
+                txt_high.Text = "";
+                txt_low.Text = "";
+                txt_close.Text = "";
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@
     <style type="text/css">
         #form1 {
             height: 807px;
+            background-color:blueviolet;
+            color:aquamarine;
         }
     </style>
 </head>

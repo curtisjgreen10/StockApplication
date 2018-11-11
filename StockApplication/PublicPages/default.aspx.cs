@@ -9,14 +9,16 @@ namespace StockApplication.PublicPages
 {
     public partial class _default : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void btn_stf_login_Click(object sender, EventArgs e)

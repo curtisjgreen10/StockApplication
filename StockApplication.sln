@@ -4,21 +4,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockApplication", "StockApplication\StockApplication.csproj", "{7EE46BFF-FBB4-481F-82E0-D17D6B7F9131}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3FF74E98-5C8B-4CE3-AC71-BC2354492069} = {3FF74E98-5C8B-4CE3-AC71-BC2354492069}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptDecrypt", "EncryptDecrypt\EncryptDecrypt.csproj", "{6B89E018-E588-4623-83CD-DC9BC2092F40}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockService", "StockService\", "{0D526615-B6FC-45D9-ADBE-93FEB53C9106}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockService", "StockService\", "{3FF74E98-5C8B-4CE3-AC71-BC2354492069}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49985"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\StockApplication\StockService\"
+		Debug.AspNetCompiler.PhysicalPath = "StockService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49985\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_49985"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\Desktop\StockApplication\StockService\"
+		Release.AspNetCompiler.PhysicalPath = "StockService\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49985\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
@@ -42,10 +45,10 @@ Global
 		{6B89E018-E588-4623-83CD-DC9BC2092F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B89E018-E588-4623-83CD-DC9BC2092F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B89E018-E588-4623-83CD-DC9BC2092F40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D526615-B6FC-45D9-ADBE-93FEB53C9106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D526615-B6FC-45D9-ADBE-93FEB53C9106}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D526615-B6FC-45D9-ADBE-93FEB53C9106}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D526615-B6FC-45D9-ADBE-93FEB53C9106}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
