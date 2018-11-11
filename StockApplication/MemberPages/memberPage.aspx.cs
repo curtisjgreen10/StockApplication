@@ -24,18 +24,18 @@ namespace StockApplication.MemberPages
                 proxy.StockBuild("does not matter");
                 string data = proxy.StockQuote(txt_symbol.Text);
                 string[] stats = data.Split(',');
-                txt_open.Text = "$" + stats[0];
-                txt_high.Text = "$" + stats[1];
-                txt_low.Text = "$" + stats[2];
-                txt_close.Text = "$" + stats[3];
+                lbl_open.Text = "$" + stats[0];
+                lbl_high.Text = "$" + stats[1];
+                lbl_low.Text = "$" + stats[2];
+                lbl_close.Text = "$" + stats[3];
             }
             catch (Exception ex)
             {
                 //display any exception messages in txt_open text box
-                txt_open.Text = "no data or invalid stock or other error";
-                txt_high.Text = "";
-                txt_low.Text = "";
-                txt_close.Text = "";
+                lbl_open.Text = "no data or invalid stock or other error";
+                lbl_high.Text = "";
+                lbl_low.Text = "";
+                lbl_close.Text = "";
             }
         }
     }

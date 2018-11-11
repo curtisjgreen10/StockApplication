@@ -14,7 +14,7 @@ public class StockService : IStockService
 {
     private const string NYSE_URL = "http://www.wsj.com/mdc/public/page/2_3024-NYSE.html";
     private string filename_;
-    private const int MAX_TRIES = 5;
+    private const int MAX_TRIES = 10;
 
     /// <summary>
     /// builds the stock file data base on the given url

@@ -8,8 +8,8 @@
     <style type="text/css">
         #form1 {
             height: 807px;
-            background-color:blueviolet;
-            color:aquamarine;
+            background-color:aquamarine;
+            color:black;
         }
     </style>
 </head>
@@ -27,17 +27,20 @@
             <div align="center">
             Sign Up For Memebership Here:
             <span style="display:block; height: 26px; width: 50px;"></span>
-            Email Address:
+            Username:
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:TextBox ID="txt_email" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:TextBox ID="txt_username" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:Label ID="lbl_username_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 15px; width: 50px;"></span>
             Password:
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:TextBox ID="txt_pass" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:TextBox ID="txt_pass" runat="server" TextMode="Password" Width="220px"  ></asp:TextBox>
+            <asp:Label ID="lbl_pass_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 5px; width: 50px;"></span>
             Confirm Password:
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:TextBox ID="txt_pass_cnfrm" runat="server" Width="220px"  ></asp:TextBox>
+            <asp:TextBox ID="txt_pass_cnfrm" runat="server" TextMode="Password" Width="220px"  ></asp:TextBox>
+            <asp:Label ID="lbl_pass_cnfrm_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:Button ID="btn_signup"  runat="server" Text="Sign Up"  Height="44px" Width="139px" OnClick="btn_signup_Click" ></asp:Button>
             <span style="display:block; height: 5px; width: 50px;"></span>

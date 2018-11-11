@@ -173,6 +173,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\StockService\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncryptDecrypt\EncryptDecrypt.csproj">
+      <Project>{6b89e018-e588-4623-83cd-dc9bc2092f40}</Project>
+      <Name>EncryptDecrypt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -31,40 +31,40 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.TextBox txt_symbol;
         
         /// <summary>
-        /// txt_open control.
+        /// lbl_open control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_open;
+        protected global::System.Web.UI.WebControls.Label lbl_open;
         
         /// <summary>
-        /// txt_high control.
+        /// lbl_high control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_high;
+        protected global::System.Web.UI.WebControls.Label lbl_high;
         
         /// <summary>
-        /// txt_low control.
+        /// lbl_low control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_low;
+        protected global::System.Web.UI.WebControls.Label lbl_low;
         
         /// <summary>
-        /// txt_close control.
+        /// lbl_close control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_close;
+        protected global::System.Web.UI.WebControls.Label lbl_close;
         
         /// <summary>
         /// btn_go control.
