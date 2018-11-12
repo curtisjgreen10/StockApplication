@@ -16,7 +16,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="height: 357px">
-            <div align="center">
+            <div align="center" style="height: 398px">
             <span style="display:block; height: 100px; width: 50px;"></span>
             Member Login Page:
             <span style="display:block; height: 26px; width: 50px;"></span>
@@ -31,7 +31,10 @@
             <asp:Label ID="lbl_pass_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 23px; width: 50px;"></span>
             <asp:Button ID="btn_mber_login"  runat="server" Text="Member Login"  Height="44px" Width="139px" OnClick="btn_mber_login_Click" ></asp:Button>
-            <span style="display:block; height: 5px; width: 50px;"></span>
+            <span style="display:block; height: 21px; width: 50px;"></span>
+            <asp:Label ID="lbl_usrname" runat="server" Text=""></asp:Label>
+            <span style="display:block; height: 36px; width: 50px;"></span>
+            <asp:Button ID="btn_not_you"  runat="server" Text="Not You?"  Height="44px" Width="139px" OnClick="btn_not_you_Click" ></asp:Button>
             </div>
         </div>
     </form>

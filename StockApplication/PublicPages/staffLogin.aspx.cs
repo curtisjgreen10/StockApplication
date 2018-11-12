@@ -11,7 +11,18 @@ namespace StockApplication.PublicPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            /*
+            HttpCookie myCookies = Request.Cookies["myCookieId"];
+            if ((myCookies == null) || (myCookies["Name"] == ""))
+            {
+                lblUser.Text = "Welcome, new user";
+            }
+            else
+            {
+                lblUser.Text = "Welcome, " + myCookies["Name"];
+                lblEmail.Text = "We have your email " + myCookies["Email"];
+            }
+            */
         }
     }
 }

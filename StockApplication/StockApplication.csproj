@@ -76,9 +76,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
-    <Content Include="Member.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="MemberPages\accountInformation.aspx" />
     <Content Include="MemberPages\memberPage.aspx" />
     <Content Include="PublicPages\default.aspx" />

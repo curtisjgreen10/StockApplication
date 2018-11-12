@@ -5,28 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace EncryptDecrypt
 {
     public class EncryptDecypt
     {
-
-
-
-        public void Encrypt(string userName, string passWord)
-        {
-            int hash = 0;
-            for(int i = 0; i < passWord.Length; i++)
-            {
-                hash += passWord[i];
-            }
-        }
-
-        public void Decrypt()
-        {
-
-        }
-
         public static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
         {
             // Check arguments.
@@ -112,6 +97,57 @@ namespace EncryptDecrypt
 
             return plaintext;
 
+        }
+
+        /// <summary>
+        /// write the username and password to xml file.  
+        /// </summary>
+        /// <param name="username">usename of member</param>
+        /// <param name="encryptedPass"> password of member</param>
+        public static void writeXml(string username, string encryptedPass, bool staff)
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Member.xml");
+            if (File.Exists(path))
+            {
+                
+                var doc = XDocument.Load(path);
+                XElement newMember;
+                if (staff)
+                    newMember = new XElement("Member_s");
+                else
+                    newMember = new XElement("Member_n");
+                newMember.SetAttributeValue("username", username);
+                newMember.SetAttributeValue("password", encryptedPass);
+                doc.Element("Members").Add(newMember);
+                doc.Save(path);
+            }
+            else
+            {
+                XmlTextWriter writer = null;
+                try
+                {
+                    writer = new XmlTextWriter(path, Encoding.Unicode);
+                    writer.Formatting = Formatting.Indented;
+                    writer.WriteStartDocument();
+                    writer.WriteStartElement("Members");
+                    if (staff)
+                        writer.WriteStartElement("Member_s");
+                    else
+                        writer.WriteStartElement("Member_n");
+                    writer.WriteAttributeString("username", username);
+                    writer.WriteAttributeString("password", encryptedPass);
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+                    writer.WriteEndDocument();
+                }
+                finally
+                {
+                    if (writer != null)
+                    {
+                        writer.Close();
+                    }
+                }
+            }
         }
     }
 }

@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using EncryptDecrypt;
 using System.Security.Cryptography;
 using System.IO;
+using System.Xml;
+using System.Text;
+using System.Xml.Linq;
 
 namespace StockApplication.PublicPages
 {
@@ -56,11 +59,7 @@ namespace StockApplication.PublicPages
                 strEncrypted += encrypted[i].ToString() + ",";
             }
 
-            /*******************************************/
-            //TODO Add strEncrypted and username to Member.xml here for component 'e' of part 2.
-            //Since we are adding information from this event handler we know this a normal member not staff.
-            //This can work like a key value pair. Key->username:Value->password, since the username is not encrypted.
-            /*******************************************/
+            EncryptDecypt.writeXml(txt_username.Text, strEncrypted, false);
 
             //Access member page if everything worked
             Response.Redirect("~/MemberPages/memberPage.aspx");

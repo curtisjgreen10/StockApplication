@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EncryptDecrypt;
 
 
 
@@ -11,6 +12,23 @@ namespace StockApplication.PublicPages
 {
     public partial class login : System.Web.UI.Page
     {
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            btn_not_you.Visible = false;
+            HttpCookie myCookies = Request.Cookies[txt_username.Text];
+            if ((myCookies == null) || (myCookies["Name"] == ""))
+            {
+                lbl_usrname.Text = "Welcome, new user";
+            }
+            else
+            {
+                btn_not_you.Visible = true;
+                lbl_usrname.Text = "Welcome, " + myCookies["Name"];
+                txt_username.Text = myCookies["Name"];
+            }
+        }
+
         protected void btn_mber_login_Click(object sender, EventArgs e)
         {
 
@@ -28,6 +46,13 @@ namespace StockApplication.PublicPages
                 return;
             }
 
+            //add username to after login
+            HttpCookie myCookies = new HttpCookie(txt_username.Text);
+            myCookies["UserName"] = txt_username.Text;
+            myCookies.Expires = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(myCookies);
+            
+
 
             /*******************************************/
             //TODO search for username (txt_username.Text)  
@@ -39,6 +64,14 @@ namespace StockApplication.PublicPages
 
             //Access member page if everything worked
             Response.Redirect("~/MemberPages/memberPage.aspx");
+        }
+
+        protected void btn_not_you_Click(object sender, EventArgs e)
+        {
+            txt_username.Text = "";
+            txt_pass.Text = "";
+            lbl_usrname.Text = "Welcome, new user";
+            btn_not_you.Visible = false;
         }
     }
 }
