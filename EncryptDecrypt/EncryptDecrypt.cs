@@ -47,11 +47,8 @@ namespace EncryptDecrypt
                     }
                 }
             }
-
-
             // Return the encrypted bytes from the memory stream.
             return encrypted;
-
         }
 
         public static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
@@ -104,21 +101,28 @@ namespace EncryptDecrypt
         /// </summary>
         /// <param name="username">usename of member</param>
         /// <param name="encryptedPass"> password of member</param>
-        public static void writeXml(string username, string encryptedPass, bool staff)
+        public static void writeXml(string[] memberData, bool staff)
         {
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Member.xml");
+            string root = "Members";
+            string filename = "Member.xml";
+
+            if (staff)
+                filename = "Staff.xml";
+
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
             if (File.Exists(path))
             {
                 
                 var doc = XDocument.Load(path);
-                XElement newMember;
+                XElement newMember = new XElement("Member");
+                newMember.SetAttributeValue("username", memberData[0]);
+                newMember.SetAttributeValue("password", memberData[1]);
+                //this probably should be in a different location than right next to the password
+                newMember.SetAttributeValue("key", memberData[2]);
+                newMember.SetAttributeValue("iv", memberData[3]);
                 if (staff)
-                    newMember = new XElement("Member_s");
-                else
-                    newMember = new XElement("Member_n");
-                newMember.SetAttributeValue("username", username);
-                newMember.SetAttributeValue("password", encryptedPass);
-                doc.Element("Members").Add(newMember);
+                    root = "StaffMembers";
+                doc.Element(root).Add(newMember);
                 doc.Save(path);
             }
             else
@@ -129,13 +133,15 @@ namespace EncryptDecrypt
                     writer = new XmlTextWriter(path, Encoding.Unicode);
                     writer.Formatting = Formatting.Indented;
                     writer.WriteStartDocument();
-                    writer.WriteStartElement("Members");
                     if (staff)
-                        writer.WriteStartElement("Member_s");
-                    else
-                        writer.WriteStartElement("Member_n");
-                    writer.WriteAttributeString("username", username);
-                    writer.WriteAttributeString("password", encryptedPass);
+                        root = "StaffMembers";
+                    writer.WriteStartElement(root);
+                    writer.WriteStartElement("Member");
+                    writer.WriteAttributeString("username", memberData[0]);
+                    writer.WriteAttributeString("password", memberData[1]);
+                    //this probably should be in a different location than right next to the password
+                    writer.WriteAttributeString("key", memberData[2]);
+                    writer.WriteAttributeString("iv", memberData[3]);
                     writer.WriteEndElement();
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
@@ -147,6 +153,52 @@ namespace EncryptDecrypt
                         writer.Close();
                     }
                 }
+            }
+        }
+
+        public static string[] readXml(string username, bool staff)
+        {
+            string[] memberData = new string[3];
+            string filename = "Member.xml";
+            if (staff)
+                filename = "Staff.xml";
+
+            XmlTextReader reader = null;
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
+
+            if (File.Exists(path))
+            {
+                try
+                {
+                    reader = new XmlTextReader(path);
+                    reader.WhitespaceHandling = WhitespaceHandling.None;
+                    while (reader.Read())
+                    {
+                        if (reader.HasAttributes)
+                        {
+                            if (reader.GetAttribute(0).Equals(username))
+                            {
+                                memberData[0] = reader.GetAttribute(1);
+                                memberData[1] = reader.GetAttribute(2);
+                                memberData[2] = reader.GetAttribute(3);
+                                return memberData;
+                            }
+                        }
+                    }
+                    return null;
+                }
+                finally
+                {
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
+                }
+            }
+            else
+            {
+                memberData[0] = "FILE NOT FOUND";
+                return memberData;
             }
         }
     }

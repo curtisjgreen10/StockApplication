@@ -47,20 +47,60 @@ namespace StockApplication.PublicPages
                 lbl_pass_cnfrm_error.Text = "Passwords do not match!";
                 return;
             }
+            //check if username is taken
+            string[] usrNmChk = EncryptDecypt.readXml(txt_username.Text, false);
+            if (usrNmChk != null && !usrNmChk[0].Equals("FILE NOT FOUND"))
+            {
+                //username was found in file
+                lbl_username_error.Text = "Username taken, please choose again";
+                txt_username.Text = "";
+                return;
+            }
+            //no errors so sign member up
+            signup();
+        }
 
+        private void signup()
+        {
+            int i;
+            string[] data = new string[4];
             byte[] encrypted;
             string strEncrypted = "";
-            using (Aes myAes = Aes.Create())
+            string key = "";
+            string iv = "";
+            data[0] = txt_username.Text;
+            Aes aesAlg = Aes.Create();
+
+            // store key for de-cryption
+            for (i = 0; i < aesAlg.Key.Length - 1; i++)
             {
-                encrypted = EncryptDecypt.EncryptStringToBytes_Aes(txt_pass.Text, myAes.Key, myAes.IV);
+                key += aesAlg.Key[i].ToString() + ",";
             }
-            for (int i = 0; i < encrypted.Length; i++)
+            key += aesAlg.Key[i].ToString();
+            data[2] = key;
+
+            // store iv for de-cryption
+            for (i = 0; i < aesAlg.IV.Length - 1; i++)
+            {
+                iv += aesAlg.IV[i].ToString() + ",";
+            }
+            iv += aesAlg.IV[i].ToString();
+            data[3] = iv;
+
+            using (aesAlg)
+            {
+                encrypted = EncryptDecypt.EncryptStringToBytes_Aes(txt_pass.Text, aesAlg.Key, aesAlg.IV);
+            }
+
+            //encrypted text - password
+            for (i = 0; i < encrypted.Length - 1; i++)
             {
                 strEncrypted += encrypted[i].ToString() + ",";
             }
+            strEncrypted += encrypted[i].ToString();
+            data[1] = strEncrypted;
 
-            EncryptDecypt.writeXml(txt_username.Text, strEncrypted, false);
-
+            EncryptDecypt.writeXml(data, false);
             //Access member page if everything worked
             Response.Redirect("~/MemberPages/memberPage.aspx");
         }
