@@ -11,7 +11,10 @@ namespace StockApplication.MemberPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["username"] != null)
+            {
+                lbl_logged_in.Text = "Logged in as: " + Session["username"];
+            }
         }
 
         protected void btn_go_Click(object sender, EventArgs e)

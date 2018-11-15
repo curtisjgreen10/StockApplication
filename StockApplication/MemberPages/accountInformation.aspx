@@ -12,12 +12,22 @@
             color:black;
         }
     </style>
+    <style type="text/css">
+        #lbl_logged_in {
+            height: 807px;
+            background-color:blueviolet;
+            color:white;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
 
-             <div align="center">
+           <div align="center">
+            <span style="display:block; height: 10px; width: 10px;"></span>
+            <span style="display:inline-block; width:10px;"></span>
+            <asp:Label ID="lbl_logged_in" Text="" runat="server" ></asp:Label>
             <span style="display:block; height: 100px; width: 50px;"></span>
             Account Information Page:
             <span style="display:block; height: 26px; width: 50px;"></span>

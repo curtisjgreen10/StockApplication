@@ -67,6 +67,15 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.Button btn_mber_login;
         
         /// <summary>
+        /// chk_stay_logged_in control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk_stay_logged_in;
+        
+        /// <summary>
         /// lbl_usrname control.
         /// </summary>
         /// <remarks>

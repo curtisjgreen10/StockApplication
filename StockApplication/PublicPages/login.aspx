@@ -31,6 +31,8 @@
             <asp:Label ID="lbl_pass_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 23px; width: 50px;"></span>
             <asp:Button ID="btn_mber_login"  runat="server" Text="Member Login"  Height="44px" Width="139px" OnClick="btn_mber_login_Click" ></asp:Button>
+            <span style="display:block; height: 23px; width: 50px;"></span>
+            <asp:CheckBox ID="chk_stay_logged_in"  runat="server" Text="Keep me logged in" ></asp:CheckBox>
             <span style="display:block; height: 21px; width: 50px;"></span>
             <asp:Label ID="lbl_usrname" runat="server" Text=""></asp:Label>
             <span style="display:block; height: 36px; width: 50px;"></span>
