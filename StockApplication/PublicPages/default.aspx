@@ -1,20 +1,22 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="StockApplication.PublicPages._default" %>
+<%@ Register Src="~/PublicPages/captcha.ascx" TagName="captcha" TagPrefix="user" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html "">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
     <style type="text/css">
-        #form1 {
+        #mainDiv {
             height: 807px;
             background-color:aquamarine;
             color:black;
         }
     </style>
+
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="mainDiv" runat="server">
         <div>
             <div align="right">
             <span style="display:block; height: 1px; width: 50px;"></span>
@@ -43,7 +45,8 @@
             <asp:Label ID="lbl_pass_cnfrm_error" runat="server" ForeColor="Red" Text=""></asp:Label>
             <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:Button ID="btn_signup"  runat="server" Text="Sign Up"  Height="44px" Width="139px" OnClick="btn_signup_Click" ></asp:Button>
-            <span style="display:block; height: 5px; width: 50px;"></span>
+            <span style="display:block; height: 5px; width: 100px;"></span>
+            <user:captcha ID="capTable" runat="server" />
             </div>
             <span style="display:block; height: 50px; width: 50px;"></span>
             Membership Features: **TODO: LIST MEMBERSHIP FEATURES HERE**
@@ -57,5 +60,7 @@
             </div>
         </div>
     </form>
+
+
 </body>
 </html>

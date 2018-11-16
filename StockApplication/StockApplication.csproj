@@ -69,15 +69,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ImageService\Service.wsdl" />
+    <None Include="Connected Services\ImageService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ImageService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ImageService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\StockService\configuration91.svcinfo" />
     <None Include="Connected Services\StockService\configuration.svcinfo" />
     <None Include="Connected Services\StockService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ImageService\Service.disco" />
+    <None Include="Connected Services\ImageService\configuration91.svcinfo" />
+    <None Include="Connected Services\ImageService\configuration.svcinfo" />
+    <None Include="Connected Services\ImageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
     <Content Include="MemberPages\accountInformation.aspx" />
     <Content Include="MemberPages\memberPage.aspx" />
+    <Content Include="PublicPages\captcha.ascx" />
     <Content Include="PublicPages\default.aspx" />
     <Content Include="PublicPages\login.aspx" />
     <Content Include="PublicPages\serviceDirectory.aspx" />
@@ -86,6 +104,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ImageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StockService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +132,13 @@
       <DependentUpon>memberPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicPages\captcha.ascx.cs">
+      <DependentUpon>captcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPages\captcha.ascx.designer.cs">
+      <DependentUpon>captcha.ascx</DependentUpon>
+    </Compile>
     <Compile Include="PublicPages\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +198,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ImageService\" />
     <WCFMetadataStorage Include="Connected Services\StockService\" />
   </ItemGroup>
   <ItemGroup>

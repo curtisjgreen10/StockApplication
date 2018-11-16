@@ -13,13 +13,13 @@ namespace StockApplication.PublicPages {
     public partial class _default {
         
         /// <summary>
-        /// form1 control.
+        /// mainDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm mainDiv;
         
         /// <summary>
         /// btn_login control.
@@ -101,6 +101,15 @@ namespace StockApplication.PublicPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_signup;
+        
+        /// <summary>
+        /// capTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::StockApplication.PublicPages.captcha capTable;
         
         /// <summary>
         /// btn_svrc_dir control.
