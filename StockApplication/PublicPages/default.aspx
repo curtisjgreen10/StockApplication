@@ -8,7 +8,7 @@
     <title>Stock Sign Up</title>
     <style type="text/css">
         #pic {
-            background-image:url('background1.jpg');
+            background-image:url('background_img.jpg');
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-size:cover;
@@ -64,7 +64,7 @@
             <asp:TextBox ID="txt_username" runat="server" Width="220px"  ></asp:TextBox>
             <asp:Label ID="Label3" runat="server" style="background-color:darkorange" Text="*" BorderColor="Yellow" BorderStyle="Solid"></asp:Label>
             <asp:Label ID="lbl_username_error" runat="server" ForeColor="Red" Text=""></asp:Label>
-            <span style="display:block; height: 15px; width: 50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:Label ID="Label4" runat="server" style="background-color:darkorange" Text="Password:" BorderColor="Yellow" BorderStyle="Solid" Width="192px"></asp:Label>
             <asp:TextBox ID="txt_pass" runat="server" TextMode="Password" Width="220px"  ></asp:TextBox>
             <asp:Label ID="Label5" runat="server" style="background-color:darkorange" Text="*" BorderColor="Yellow" BorderStyle="Solid"></asp:Label>

@@ -7,7 +7,7 @@
     <title>Service Directory</title>
     <style type="text/css">
         #main {
-            background-image:url('background1.jpg');
+            background-image:url('background_img.jpg');
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-size:cover;
