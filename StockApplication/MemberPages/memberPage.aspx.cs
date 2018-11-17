@@ -41,5 +41,15 @@ namespace StockApplication.MemberPages
                 lbl_close.Text = "";
             }
         }
+
+        protected void log_out_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/login.aspx");
+        }
+
+        protected void acct_info_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MemberPages/accountInformation.aspx");
+        }
     }
 }

@@ -13,5 +13,15 @@ namespace StockApplication.MemberPages
         {
 
         }
+
+        protected void log_out_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/login.aspx");
+        }
+
+        protected void stock_page_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MemberPages/memberPage.aspx");
+        }
     }
 }

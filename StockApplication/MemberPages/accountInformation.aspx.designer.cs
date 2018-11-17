@@ -22,6 +22,24 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// log_out control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button log_out;
+        
+        /// <summary>
+        /// stock_page control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button stock_page;
+        
+        /// <summary>
         /// lbl_logged_in control.
         /// </summary>
         /// <remarks>

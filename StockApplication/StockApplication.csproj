@@ -97,6 +97,7 @@
     <Content Include="MemberPages\memberPage.aspx" />
     <Content Include="PublicPages\captcha.ascx" />
     <Content Include="PublicPages\default.aspx" />
+    <Content Include="PublicPages\features.aspx" />
     <Content Include="PublicPages\login.aspx" />
     <Content Include="PublicPages\serviceDirectory.aspx" />
     <Content Include="PublicPages\staffLogin.aspx" />
@@ -145,6 +146,13 @@
     </Compile>
     <Compile Include="PublicPages\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicPages\features.aspx.cs">
+      <DependentUpon>features.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicPages\features.aspx.designer.cs">
+      <DependentUpon>features.aspx</DependentUpon>
     </Compile>
     <Compile Include="PublicPages\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

@@ -56,6 +56,12 @@ namespace StockApplication.PublicPages
                 txt_username.Text = "";
                 return;
             }
+
+            if (!Session["generatedString"].Equals(txt_img_string.Text))
+            {
+                return;
+            }
+
             //no errors so sign member up
             signup();
         }
@@ -105,10 +111,14 @@ namespace StockApplication.PublicPages
             Response.Redirect("~/MemberPages/memberPage.aspx");
         }
 
-        protected void btn_svrc_dir_Click(object sender, EventArgs e)
+        protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            //Show service directory
             Response.Redirect("~/PublicPages/serviceDirectory.aspx");
+        }
+
+        protected void btn_ftrs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/features.aspx");
         }
     }
 }

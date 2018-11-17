@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Stock Mainpage</title>
     <style type="text/css">
         #form1 {
             height: 807px;
@@ -23,6 +23,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <div align="right">
+            <span style="display:block; height: 30px; width: 50px;"></span>
+            <asp:Button ID="log_out"  runat="server" Text="Log Out" Width="110px" OnClick="log_out_Click"  ></asp:Button>
+            <span style="display:inline-block; width:138px;"></span>
+            <span style="display:block; height: 10px; width: 50px;"></span>
+            <asp:Button ID="acct_info"  runat="server" Text="Account" Width="110px" OnClick="acct_info_Click"></asp:Button>
+            <span style="display:inline-block; width:138px;"></span>
+            <span style="display:block; height: 30px; width: 50px;"></span>
+            </div>
             <span style="display:block; height: 10px; width: 10px;"></span>
             <span style="display:inline-block; width:10px;"></span>
             <asp:Label ID="lbl_logged_in" Text="" runat="server" ></asp:Label>

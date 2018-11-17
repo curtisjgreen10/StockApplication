@@ -58,30 +58,21 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.TextBox txt_img_len;
         
         /// <summary>
-        /// txt_img_string control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_img_string;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// btn_verify control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_verify;
-        
-        /// <summary>
-        /// lbl_msg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_msg;
+        protected global::System.Web.UI.WebControls.Label Label2;
     }
 }

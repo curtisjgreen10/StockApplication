@@ -41,7 +41,6 @@ namespace StockApplication.PublicPages
             
             Stream stream = proxy.GetImage(myStr);
             System.Drawing.Image capImage = System.Drawing.Image.FromStream(stream);
-            //Response.ContentType = "image/jpeg";
             string path1 = @"~/PublicPages/img.jpg";
             string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"PublicPages", "img.jpg");
             capImage.Save(path2, ImageFormat.Jpeg);
@@ -50,14 +49,33 @@ namespace StockApplication.PublicPages
 
         protected void btn_show_Click(object sender, EventArgs e)
         {
-            
-            string userLength = txt_img_len.Text;
+            string userLength = "";
+            int len = 0;
+
+            if (Int32.TryParse(txt_img_len.Text, out len))
+            {
+                if(len <= 0)
+                {
+                    //user entered value 0 or less so default to 4
+                    userLength = "4";
+                }
+                else
+                {
+                    //user entered good value
+                    userLength = txt_img_len.Text;
+                }
+            }
+            else
+            {
+                //user entered non-integer value so default to 4
+                userLength = "4";
+            }
             Session["userLength"] = userLength;
             string myStr = proxy.GetVerifierString(userLength);
             Session["generatedString"] = myStr;
-            btn_show.Text = "Show different image";
         }
 
+        /*LOGIC MOVED TO SIGNUP BUTTON 
         protected void btn_verify_Click(object sender, EventArgs e)
         {
             
@@ -71,5 +89,6 @@ namespace StockApplication.PublicPages
             }
             
         }
+        */
     }
 }
