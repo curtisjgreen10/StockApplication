@@ -35,9 +35,16 @@ namespace StockApplication.PublicPages
             lbl_username_error.Text = "";
             lbl_pass_error.Text = "";
             lbl_pass_cnfrm_error.Text = "";
+            lbl_captcha_error.Text = "";
             if (txt_username.Text == null || txt_username.Text == "")
             {
                 lbl_username_error.Text = "Email is empty!";
+                return;
+            }
+
+            if (txt_pass.Text == null || txt_pass.Text == "")
+            {
+                lbl_pass_error.Text = "Password is empty!";
                 return;
             }
 
@@ -59,6 +66,7 @@ namespace StockApplication.PublicPages
 
             if (!Session["generatedString"].Equals(txt_img_string.Text))
             {
+                lbl_captcha_error.Text = "Incorrect verify string, try again.";
                 return;
             }
 

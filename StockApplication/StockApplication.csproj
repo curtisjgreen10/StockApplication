@@ -97,8 +97,10 @@
     <Content Include="MemberPages\memberPage.aspx" />
     <Content Include="PublicPages\captcha.ascx" />
     <Content Include="PublicPages\default.aspx" />
+    <Content Include="PublicPages\default.css" />
     <Content Include="PublicPages\features.aspx" />
     <Content Include="PublicPages\login.aspx" />
+    <Content Include="PublicPages\login.css" />
     <Content Include="PublicPages\serviceDirectory.aspx" />
     <Content Include="PublicPages\staffLogin.aspx" />
     <Content Include="StaffPages\staffPage.aspx" />

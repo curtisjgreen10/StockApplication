@@ -76,22 +76,22 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.Label lbl_sgn_up;
         
         /// <summary>
-        /// Label1 control.
+        /// lbl_rqrd_txt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lbl_rqrd_txt;
         
         /// <summary>
-        /// Label2 control.
+        /// lbl_usrname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbl_usrname;
         
         /// <summary>
         /// txt_username control.
@@ -103,13 +103,13 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.TextBox txt_username;
         
         /// <summary>
-        /// Label3 control.
+        /// lbl_user_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lbl_user_ask;
         
         /// <summary>
         /// lbl_username_error control.
@@ -121,13 +121,13 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.Label lbl_username_error;
         
         /// <summary>
-        /// Label4 control.
+        /// lbl_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lbl_pass;
         
         /// <summary>
         /// txt_pass control.
@@ -139,13 +139,13 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.TextBox txt_pass;
         
         /// <summary>
-        /// Label5 control.
+        /// lbl_pass_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lbl_pass_ask;
         
         /// <summary>
         /// lbl_pass_error control.
@@ -157,13 +157,13 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.Label lbl_pass_error;
         
         /// <summary>
-        /// Label6 control.
+        /// lbl_cnfrm_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lbl_cnfrm_pass;
         
         /// <summary>
         /// txt_pass_cnfrm control.
@@ -175,13 +175,13 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.TextBox txt_pass_cnfrm;
         
         /// <summary>
-        /// Label7 control.
+        /// lbl_cnfrm_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label lbl_cnfrm_ask;
         
         /// <summary>
         /// lbl_pass_cnfrm_error control.
@@ -202,13 +202,13 @@ namespace StockApplication.PublicPages {
         protected global::StockApplication.PublicPages.captcha capTable;
         
         /// <summary>
-        /// Label8 control.
+        /// lbl_verify_string control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label lbl_verify_string;
         
         /// <summary>
         /// txt_img_string control.
@@ -220,13 +220,22 @@ namespace StockApplication.PublicPages {
         protected global::System.Web.UI.WebControls.TextBox txt_img_string;
         
         /// <summary>
-        /// Label9 control.
+        /// lbl_verify_string_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label lbl_verify_string_ask;
+        
+        /// <summary>
+        /// lbl_captcha_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_captcha_error;
         
         /// <summary>
         /// btn_signup control.

@@ -21,6 +21,7 @@ namespace StockApplication.PublicPages
             lbl_username_error.Text = "";
             lbl_pass_error.Text = "";
             btn_not_you.Visible = false;
+            
             //perform cookie logic
             if ((Request.Cookies["authcookie"] == null) || (Request.Cookies["authcookie"].Equals("")))
             {
@@ -28,6 +29,8 @@ namespace StockApplication.PublicPages
             }
             else
             {
+                lbl_remember.Visible = false;
+                chk_remember.Visible = false;
                 btn_not_you.Visible = true;
                 lbl_usrname.Text = "Welcome, " + Request.Cookies["authcookie"]["username"];
                 txt_username.Text = Request.Cookies["authcookie"]["username"];
@@ -92,7 +95,7 @@ namespace StockApplication.PublicPages
 
                 if (password.Equals(decryptedPass))
                 {
-                    if (chk_stay_logged_in.Checked)
+                    if (chk_remember.Checked)
                     {
                         //create user cookie
                         Response.Cookies["authcookie"]["username"] = username;
@@ -113,13 +116,35 @@ namespace StockApplication.PublicPages
 
         protected void btn_not_you_Click(object sender, EventArgs e)
         {
-            //clear everything
+            //clear and reset everything
+            lbl_remember.Visible = true;
+            chk_remember.Visible = true;
             txt_username.Text = "";
             txt_pass.Text = "";
             lbl_username_error.Text = "";
             lbl_pass_error.Text = "";
             lbl_usrname.Text = "Welcome, new user";
             btn_not_you.Visible = false;
+        }
+
+        protected void btn_sign_up_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/default.aspx");
+        }
+
+        protected void btn_stf_login_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+        protected void btn_srvc_dir_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/serviceDirectory.aspx");
+        }
+
+        protected void btn_ftrs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PublicPages/features.aspx");
         }
     }
 }
