@@ -1,0 +1,117 @@
+﻿body {
+    background-image: url('background_img.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#lbl_logged_in {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_title {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 24px;
+}
+
+#lbl_enter_stock {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_symbol {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_open {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_high {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_low {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_close {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+
+#lbl_open_price {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_high_price {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_low_price {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
+#lbl_close_price {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+

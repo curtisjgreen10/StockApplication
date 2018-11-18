@@ -22,24 +22,6 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// log_out control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button log_out;
-        
-        /// <summary>
-        /// acct_info control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button acct_info;
-        
-        /// <summary>
         /// lbl_logged_in control.
         /// </summary>
         /// <remarks>
@@ -47,6 +29,69 @@ namespace StockApplication.MemberPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_logged_in;
+        
+        /// <summary>
+        /// btn_logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_logout;
+        
+        /// <summary>
+        /// btn_account control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_account;
+        
+        /// <summary>
+        /// btn_srvc_dir control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_srvc_dir;
+        
+        /// <summary>
+        /// btn_ftrs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_ftrs;
+        
+        /// <summary>
+        /// lbl_title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_title;
+        
+        /// <summary>
+        /// lbl_enter_stock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_enter_stock;
+        
+        /// <summary>
+        /// lbl_symbol control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_symbol;
         
         /// <summary>
         /// txt_symbol control.
@@ -67,6 +112,15 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.Label lbl_open;
         
         /// <summary>
+        /// lbl_open_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_open_price;
+        
+        /// <summary>
         /// lbl_high control.
         /// </summary>
         /// <remarks>
@@ -74,6 +128,15 @@ namespace StockApplication.MemberPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_high;
+        
+        /// <summary>
+        /// lbl_high_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_high_price;
         
         /// <summary>
         /// lbl_low control.
@@ -85,6 +148,15 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.Label lbl_low;
         
         /// <summary>
+        /// lbl_low_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_low_price;
+        
+        /// <summary>
         /// lbl_close control.
         /// </summary>
         /// <remarks>
@@ -92,6 +164,15 @@ namespace StockApplication.MemberPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_close;
+        
+        /// <summary>
+        /// lbl_close_price control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_close_price;
         
         /// <summary>
         /// btn_go control.

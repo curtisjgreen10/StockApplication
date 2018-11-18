@@ -18,6 +18,23 @@
 <body id="main">
     <form id="form1" runat="server">
         <div>
+
+            <div id="links" align="right">
+            <span style="display:block; height: 30px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_sign_up"  runat="server" Text="Create Account" style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_sign_up_Click"  ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_mber_login"  runat="server" Text="Member Log In"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_mber_login_Click"  ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_stf_login"  runat="server" Text="Staff Log In"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_stf_login_Click"  ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_ftrs"  runat="server" Text="Member Features"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_ftrs_Click"  ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 10px; width: 50px;"></span>
+            </div>
+
             <span style="display:block; height: 25px; width: 10px;"></span>
             <span style="display:inline-block; width:50px;"></span>
             <asp:Label ID="Label37" Font-Size="24px" runat="server" style="background-color:darkorange" Text="Service Directory:"></asp:Label>

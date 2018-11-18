@@ -95,6 +95,7 @@
     <Content Include="Global.asax" />
     <Content Include="MemberPages\accountInformation.aspx" />
     <Content Include="MemberPages\memberPage.aspx" />
+    <Content Include="MemberPages\memberPage.css" />
     <Content Include="PublicPages\captcha.ascx" />
     <Content Include="PublicPages\default.aspx" />
     <Content Include="PublicPages\default.css" />
@@ -197,6 +198,9 @@
     <None Include="packages.config" />
     <Content Include="PublicPages\Web.config" />
     <Content Include="StaffPages\Web.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\StockApplication20181118030159 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\StockApplicationCSE - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

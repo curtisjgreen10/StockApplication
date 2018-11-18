@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 /StockApplication/PublicPages/img.jpg
+/StockApplication/Properties/PublishProfiles/CustomProfile.pubxml
+/StockApplication/Properties/PublishProfiles/StockApplication20181118030159 - Web Deploy.pubxml
+/StockApplication/Properties/PublishProfiles/StockApplicationCSE - Web Deploy.pubxml
