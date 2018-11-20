@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c552a28f-f2e9-4efa-87cc-03116a429e23" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="872e44b5-62f5-4321-86e0-2d34bbe005bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49985/Service.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar42.fulton.asu.edu/page0/Service.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="StockService.wsdl" MetadataType="Wsdl" ID="8e117de4-ad90-4fcf-ad21-66239bd97c9d" SourceId="1" SourceUrl="http://localhost:49985/Service.svc?wsdl" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="1e509047-9071-4a39-b065-1c971bd32272" SourceId="1" SourceUrl="http://localhost:49985/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="bdf2265a-6c16-4e73-9e43-2f703d8d10f7" SourceId="1" SourceUrl="http://localhost:49985/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="StockService.wsdl" MetadataType="Wsdl" ID="0ffd9d24-c8ec-46ea-8ae8-c914f4e86c3a" SourceId="1" SourceUrl="http://webstrar42.fulton.asu.edu/page0/Service.svc?wsdl" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="d9c75560-6ec1-4b00-bef5-7cff6ed7c6f4" SourceId="1" SourceUrl="http://webstrar42.fulton.asu.edu/Page0/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="e7bb918c-0b41-4dbe-b52d-bad38ef10cf3" SourceId="1" SourceUrl="http://webstrar42.fulton.asu.edu/Page0/Service.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -16,7 +16,7 @@
             <asp:Label ID="lbl_logged_in" runat="server" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>
 
             <div id="links" align="right">
-            <asp:LinkButton ID="btn_logout"  runat="server" Text="Member Log Out" style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_logout_Click" ></asp:LinkButton>
+            <asp:LinkButton ID="btn_logout"  runat="server" Text="Log Out" style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_logout_Click" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
             <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:LinkButton ID="btn_account"  runat="server" Text="Account Info"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_account_Click" ></asp:LinkButton>
@@ -25,9 +25,11 @@
             <asp:LinkButton ID="btn_srvc_dir"  runat="server" Text="Service Directory"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_srvc_dir_Click" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
             <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:LinkButton ID="btn_ftrs"  runat="server" Text="Member Features"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_ftrs_Click" ></asp:LinkButton>
+            <asp:LinkButton ID="btn_ftrs"  runat="server" Text="Features"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_ftrs_Click" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
-            <span style="display:block; height: 10px; width: 50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_stf_login"  runat="server" Text="Staff Page"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_stf_login_Click"  ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
             </div>
 
 

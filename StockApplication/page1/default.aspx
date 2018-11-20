@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="StockApplication.PublicPages._default" %>
-<%@ Register Src="~/PublicPages/captcha.ascx" TagName="captcha" TagPrefix="user" %>
+<%@ Register Src="~/page1/captcha.ascx" TagName="captcha" TagPrefix="user" %>
 <link rel="stylesheet" runat="server" media="screen" href="default.css" />
 
 <!DOCTYPE html "">
@@ -12,20 +12,24 @@
 <body>
     <form id="mainDiv" runat="server">
         <div>
+                        
+            <span style="display:block; height: 10px; width: 10px;"></span>
+            <span style="display:inline-block; width:10px;"></span>
+            <asp:Label ID="lbl_logged_in" runat="server" Visible ="false" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>
+
             <div id="links" align="right">
-            <span style="display:block; height: 30px; width: 50px;"></span>
-            <asp:LinkButton ID="btn_login"  runat="server" Text="Member Log In" style="background-color:darkorange" OnClick="btn_login_Click" BorderColor="Yellow" BorderStyle="Solid" ></asp:LinkButton>
+            <asp:LinkButton ID="btn_login"  runat="server" Text="Log In" style="background-color:darkorange" OnClick="btn_login_Click" BorderColor="Yellow" BorderStyle="Solid" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
-            <span style="display:block; height: 5px; width: 50px;"></span>
-            <asp:LinkButton ID="btn_stf_login"  runat="server" Text="Staff Log In"  style="background-color:darkorange" OnClick="btn_stf_login_Click" BorderColor="Yellow" BorderStyle="Solid" ></asp:LinkButton>
-            <span style="display:inline-block; width:50px;"></span>
-            <span style="display:block; height: 5px; width: 50px;"></span>
+            <span style="display:block; height: 2px; width: 50px;"></span>
             <asp:LinkButton ID="btn_srvc_dir"  runat="server" Text="Service Directory"  style="background-color:darkorange" OnClick="btn_srvc_dir_Click" BorderColor="Yellow" BorderStyle="Solid" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
-            <span style="display:block; height: 5px; width: 50px;"></span>
+            <span style="display:block; height: 2px; width: 50px;"></span>
             <asp:LinkButton ID="btn_ftrs"  runat="server" Text="Member Features"  style="background-color:darkorange" OnClick="btn_ftrs_Click" BorderColor="Yellow" BorderStyle="Solid" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
-            <span style="display:block; height: 10px; width: 50px;"></span>
+            <span style="display:block; height: 2px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_logout"  runat="server" Text="Log out" style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_logout_Click" ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 2px; width: 50px;"></span>
             </div>
 
             <div id="div_title" align="center">

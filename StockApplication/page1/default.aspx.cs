@@ -15,20 +15,28 @@ namespace StockApplication.PublicPages
 {
     public partial class _default : System.Web.UI.Page
     {
-        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            btn_logout.Visible = false;
+            lbl_logged_in.Visible = false;
+            //check if a user is already logged in
+            if (Session["username"] != null)
+            {
+                
+                btn_login.Visible = false;
+                btn_logout.Visible = true;
+                lbl_logged_in.Visible = true;
+                lbl_logged_in.Text = "Logged in as: " + (string)Session["username"];
+            }
+        }
 
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
             //Show login page 
-            Response.Redirect("~/PublicPages/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
-        protected void btn_stf_login_Click(object sender, EventArgs e)
-        {
-            //re-derict staff somewhere?
-            //Response.Redirect("");
-        }
 
         protected void btn_signup_Click(object sender, EventArgs e)
         {
@@ -116,17 +124,37 @@ namespace StockApplication.PublicPages
 
             EncryptDecypt.writeXml(data, false);
             //Access member page if everything worked
-            Response.Redirect("~/MemberPages/memberPage.aspx");
+            Session["username"] = data[0];
+            Session["staff"] = false;
+            Response.Redirect("~/memberPage.aspx");
         }
 
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/features.aspx");
+            Response.Redirect("~/features.aspx");
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            btn_logout.Visible = false;
+            btn_login.Visible = true;
+            lbl_logged_in.Visible = false;
+        }
+
+        protected void btn_stocks_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/memberPage.aspx");
+        }
+
+        protected void btn_account_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/accountInformation.aspx");
         }
     }
 }

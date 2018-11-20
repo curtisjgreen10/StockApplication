@@ -14,18 +14,31 @@ namespace StockApplication.PublicPages
     public partial class login : System.Web.UI.Page
     {
         //static string username;
-
+        string username;
         protected void Page_Load(object sender, EventArgs e)
         {
             //clear any lingering error messages
             lbl_username_error.Text = "";
             lbl_pass_error.Text = "";
             btn_not_you.Visible = false;
-            
+            btn_logout.Visible = false;
+            lbl_logged_in.Visible = false;
+
+            //check if user is already logged in
+            if (Session["username"] != null)
+            {
+                btn_sign_up.Visible = false;
+                btn_logout.Visible = true;
+                lbl_logged_in.Visible = true;
+                lbl_logged_in.Text = "Logged in as: " + (string)Session["username"];
+            }
+
+
             //perform cookie logic
-            if ((Request.Cookies["authcookie"] == null) || (Request.Cookies["authcookie"].Equals("")))
+            if (Request.Cookies["authcookie"] == null)
             {
                 lbl_usrname.Text = "Welcome, new user";
+                username = null;
             }
             else
             {
@@ -33,13 +46,17 @@ namespace StockApplication.PublicPages
                 chk_remember.Visible = false;
                 btn_not_you.Visible = true;
                 lbl_usrname.Text = "Welcome, " + Request.Cookies["authcookie"]["username"];
+                username = txt_username.Text;
                 txt_username.Text = Request.Cookies["authcookie"]["username"];
             }
         }
 
         protected void btn_mber_login_Click(object sender, EventArgs e)
         {
-            string username = txt_username.Text;
+            if (username == null)
+            {
+               username = txt_username.Text;
+            }
             string password = txt_pass.Text;
             lbl_username_error.Text = "";
             lbl_pass_error.Text = "";
@@ -56,7 +73,7 @@ namespace StockApplication.PublicPages
             }
 
             //check if credentials are correct
-            string[] passWrdChk = EncryptDecypt.readXml(username, false);
+            string[] passWrdChk = EncryptDecypt.readXml(username, chk_staff.Checked);
             if (passWrdChk == null || passWrdChk[0].Equals("FILE NOT FOUND"))
             {
                 lbl_username_error.Text = "Username not found or incorrect, please try again";
@@ -103,8 +120,18 @@ namespace StockApplication.PublicPages
                     }
                     //create user session
                     Session["username"] = username;
+
+                    //staff session?
+                    if (chk_staff.Checked)
+                    {
+                        Session["staff"] = true;
+                    }
+                    else
+                    {
+                        Session["staff"] = false;
+                    }
                     //Access member page if everything worked
-                    Response.Redirect("~/MemberPages/memberPage.aspx");
+                    Response.Redirect("~/memberPage.aspx");
                 }
                 else
                 {
@@ -125,11 +152,12 @@ namespace StockApplication.PublicPages
             lbl_pass_error.Text = "";
             lbl_usrname.Text = "Welcome, new user";
             btn_not_you.Visible = false;
+            Response.Cookies["authcookie"].Expires = DateTime.Now.AddDays(-1);
         }
 
         protected void btn_sign_up_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/default.aspx");
+            Response.Redirect("~/default.aspx");
         }
 
         protected void btn_stf_login_Click(object sender, EventArgs e)
@@ -139,12 +167,21 @@ namespace StockApplication.PublicPages
 
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/features.aspx");
+            Response.Redirect("~/features.aspx");
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            Session["staff"] = null;
+            Session["username"] = null;
+            btn_logout.Visible = false;
+            btn_sign_up.Visible = true;
+            lbl_logged_in.Visible = false;
         }
     }
 }

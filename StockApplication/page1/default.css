@@ -15,6 +15,15 @@ body {
     font-size: 30px;
 }
 
+#lbl_logged_in {
+    background-color: darkorange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+}
+
 #lbl_title {
     background-color: darkorange;
     border-bottom-left-radius: 5px;

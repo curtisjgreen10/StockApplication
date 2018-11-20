@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StockApplication.MemberPages {
+namespace StockApplication.PublicPages {
     
     
     public partial class _default {
         
         /// <summary>
-        /// form1 control.
+        /// mainDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm mainDiv;
         
         /// <summary>
         /// lbl_logged_in control.
@@ -31,22 +31,13 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.Label lbl_logged_in;
         
         /// <summary>
-        /// btn_logout control.
+        /// btn_login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_logout;
-        
-        /// <summary>
-        /// btn_account control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_account;
+        protected global::System.Web.UI.WebControls.LinkButton btn_login;
         
         /// <summary>
         /// btn_srvc_dir control.
@@ -67,6 +58,15 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.LinkButton btn_ftrs;
         
         /// <summary>
+        /// btn_logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_logout;
+        
+        /// <summary>
         /// lbl_title control.
         /// </summary>
         /// <remarks>
@@ -76,111 +76,183 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.Label lbl_title;
         
         /// <summary>
-        /// lbl_enter_stock control.
+        /// lbl_sgn_up control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_enter_stock;
+        protected global::System.Web.UI.WebControls.Label lbl_sgn_up;
         
         /// <summary>
-        /// lbl_symbol control.
+        /// lbl_rqrd_txt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_symbol;
+        protected global::System.Web.UI.WebControls.Label lbl_rqrd_txt;
         
         /// <summary>
-        /// txt_symbol control.
+        /// lbl_usrname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_symbol;
+        protected global::System.Web.UI.WebControls.Label lbl_usrname;
         
         /// <summary>
-        /// lbl_open control.
+        /// txt_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_open;
+        protected global::System.Web.UI.WebControls.TextBox txt_username;
         
         /// <summary>
-        /// lbl_open_price control.
+        /// lbl_user_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_open_price;
+        protected global::System.Web.UI.WebControls.Label lbl_user_ask;
         
         /// <summary>
-        /// lbl_high control.
+        /// lbl_username_error control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_high;
+        protected global::System.Web.UI.WebControls.Label lbl_username_error;
         
         /// <summary>
-        /// lbl_high_price control.
+        /// lbl_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_high_price;
+        protected global::System.Web.UI.WebControls.Label lbl_pass;
         
         /// <summary>
-        /// lbl_low control.
+        /// txt_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_low;
+        protected global::System.Web.UI.WebControls.TextBox txt_pass;
         
         /// <summary>
-        /// lbl_low_price control.
+        /// lbl_pass_ask control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_low_price;
+        protected global::System.Web.UI.WebControls.Label lbl_pass_ask;
         
         /// <summary>
-        /// lbl_close control.
+        /// lbl_pass_error control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_close;
+        protected global::System.Web.UI.WebControls.Label lbl_pass_error;
         
         /// <summary>
-        /// lbl_close_price control.
+        /// lbl_cnfrm_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_close_price;
+        protected global::System.Web.UI.WebControls.Label lbl_cnfrm_pass;
         
         /// <summary>
-        /// btn_go control.
+        /// txt_pass_cnfrm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_go;
+        protected global::System.Web.UI.WebControls.TextBox txt_pass_cnfrm;
+        
+        /// <summary>
+        /// lbl_cnfrm_ask control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_cnfrm_ask;
+        
+        /// <summary>
+        /// lbl_pass_cnfrm_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_pass_cnfrm_error;
+        
+        /// <summary>
+        /// capTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::StockApplication.PublicPages.captcha capTable;
+        
+        /// <summary>
+        /// lbl_verify_string control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_verify_string;
+        
+        /// <summary>
+        /// txt_img_string control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_img_string;
+        
+        /// <summary>
+        /// lbl_verify_string_ask control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_verify_string_ask;
+        
+        /// <summary>
+        /// lbl_captcha_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_captcha_error;
+        
+        /// <summary>
+        /// btn_signup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_signup;
     }
 }

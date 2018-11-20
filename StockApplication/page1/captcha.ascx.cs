@@ -41,10 +41,11 @@ namespace StockApplication.PublicPages
             
             Stream stream = proxy.GetImage(myStr);
             System.Drawing.Image capImage = System.Drawing.Image.FromStream(stream);
-            string path1 = @"~/PublicPages/img.jpg";
-            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"PublicPages", "img.jpg");
+            string path1 = @"~/img.jpg";
+            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "img.jpg");
             capImage.Save(path2, ImageFormat.Jpeg);
             image_vfy.ImageUrl = path1;
+            
         }
 
         protected void btn_show_Click(object sender, EventArgs e)
@@ -74,21 +75,5 @@ namespace StockApplication.PublicPages
             string myStr = proxy.GetVerifierString(userLength);
             Session["generatedString"] = myStr;
         }
-
-        /*LOGIC MOVED TO SIGNUP BUTTON 
-        protected void btn_verify_Click(object sender, EventArgs e)
-        {
-            
-            if (Session["generatedString"].Equals(txt_img_string.Text))
-            {
-                lbl_msg.Text = "Text matches image!";
-            }
-            else
-            {
-                lbl_msg.Text = "Incorrect, please try again";
-            }
-            
-        }
-        */
     }
 }

@@ -11,9 +11,18 @@ namespace StockApplication.MemberPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btn_stf_login.Visible = false;
             if(Session["username"] != null)
             {
-                lbl_logged_in.Text = "Logged in as: " + Session["username"];
+                if((bool)Session["staff"] == true)
+                {
+                    btn_stf_login.Visible = true;
+                    lbl_logged_in.Text = "Logged in as staff: " + (string)Session["username"];
+                }
+                else
+                {
+                    lbl_logged_in.Text = "Logged in as: " + (string)Session["username"];
+                }
             }
         }
 
@@ -42,30 +51,32 @@ namespace StockApplication.MemberPages
             }
         }
 
-
-        protected void acct_info_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void btn_logout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/login.aspx");
+            btn_stf_login.Visible = false;
+            Session["username"] = null;
+            Session["staff"] = null;
+            Response.Redirect("~/login.aspx");
         }
 
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MemberPages/accountInformation.aspx");
+            Response.Redirect("~/accountInformation.aspx");
         }
 
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/PublicPages/features.aspx");
+            Response.Redirect("~/features.aspx");
+        }
+
+        protected void btn_stf_login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/staffPage.aspx");
         }
     }
 }

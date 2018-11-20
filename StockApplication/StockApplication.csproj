@@ -79,12 +79,6 @@
     <None Include="Connected Services\ImageService\Service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StockService\configuration91.svcinfo" />
-    <None Include="Connected Services\StockService\configuration.svcinfo" />
-    <None Include="Connected Services\StockService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\ImageService\Service.disco" />
     <None Include="Connected Services\ImageService\configuration91.svcinfo" />
     <None Include="Connected Services\ImageService\configuration.svcinfo" />
@@ -92,19 +86,25 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\StockService\configuration91.svcinfo" />
+    <None Include="Connected Services\StockService\configuration.svcinfo" />
+    <None Include="Connected Services\StockService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
-    <Content Include="MemberPages\accountInformation.aspx" />
-    <Content Include="MemberPages\memberPage.aspx" />
-    <Content Include="MemberPages\memberPage.css" />
-    <Content Include="PublicPages\captcha.ascx" />
-    <Content Include="PublicPages\default.aspx" />
-    <Content Include="PublicPages\default.css" />
-    <Content Include="PublicPages\features.aspx" />
-    <Content Include="PublicPages\login.aspx" />
-    <Content Include="PublicPages\login.css" />
-    <Content Include="PublicPages\serviceDirectory.aspx" />
-    <Content Include="PublicPages\staffLogin.aspx" />
-    <Content Include="StaffPages\staffPage.aspx" />
+    <Content Include="page1\accountInformation.aspx" />
+    <Content Include="page1\memberPage.aspx" />
+    <Content Include="page1\memberPage.css" />
+    <Content Include="page1\captcha.ascx" />
+    <Content Include="page1\default.aspx" />
+    <Content Include="page1\default.css" />
+    <Content Include="page1\features.aspx" />
+    <Content Include="page1\login.aspx" />
+    <Content Include="page1\login.css" />
+    <Content Include="page1\serviceDirectory.aspx" />
+    <Content Include="page1\staffPage.aspx" />
+    <Content Include="page1\staffPage.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,73 +121,65 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MemberPages\accountInformation.aspx.cs">
+    <Compile Include="page1\accountInformation.aspx.cs">
       <DependentUpon>accountInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MemberPages\accountInformation.aspx.designer.cs">
+    <Compile Include="page1\accountInformation.aspx.designer.cs">
       <DependentUpon>accountInformation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MemberPages\memberPage.aspx.cs">
+    <Compile Include="page1\memberPage.aspx.cs">
       <DependentUpon>memberPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MemberPages\memberPage.aspx.designer.cs">
+    <Compile Include="page1\memberPage.aspx.designer.cs">
       <DependentUpon>memberPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublicPages\captcha.ascx.cs">
+    <Compile Include="page1\captcha.ascx.cs">
       <DependentUpon>captcha.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PublicPages\captcha.ascx.designer.cs">
+    <Compile Include="page1\captcha.ascx.designer.cs">
       <DependentUpon>captcha.ascx</DependentUpon>
     </Compile>
-    <Compile Include="PublicPages\default.aspx.cs">
+    <Compile Include="page1\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PublicPages\default.aspx.designer.cs">
+    <Compile Include="page1\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PublicPages\features.aspx.cs">
+    <Compile Include="page1\features.aspx.cs">
       <DependentUpon>features.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PublicPages\features.aspx.designer.cs">
+    <Compile Include="page1\features.aspx.designer.cs">
       <DependentUpon>features.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PublicPages\login.aspx.cs">
+    <Compile Include="page1\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PublicPages\login.aspx.designer.cs">
+    <Compile Include="page1\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PublicPages\serviceDirectory.aspx.cs">
+    <Compile Include="page1\serviceDirectory.aspx.cs">
       <DependentUpon>serviceDirectory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PublicPages\serviceDirectory.aspx.designer.cs">
+    <Compile Include="page1\serviceDirectory.aspx.designer.cs">
       <DependentUpon>serviceDirectory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PublicPages\staffLogin.aspx.cs">
-      <DependentUpon>staffLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PublicPages\staffLogin.aspx.designer.cs">
-      <DependentUpon>staffLogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StaffPages\staffPage.aspx.cs">
+    <Compile Include="page1\staffPage.aspx.cs">
       <DependentUpon>staffPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StaffPages\staffPage.aspx.designer.cs">
+    <Compile Include="page1\staffPage.aspx.designer.cs">
       <DependentUpon>staffPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MemberPages\Web.config" />
     <None Include="Connected Services\StockService\Service.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -196,8 +188,7 @@
     </None>
     <None Include="Connected Services\StockService\StockService.wsdl" />
     <None Include="packages.config" />
-    <Content Include="PublicPages\Web.config" />
-    <Content Include="StaffPages\Web.config" />
+    <Content Include="page1\Web.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\StockApplication20181118030159 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\StockApplicationCSE - Web Deploy.pubxml" />
