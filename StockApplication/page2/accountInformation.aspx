@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accountInformation.aspx.cs" Inherits="StockApplication.MemberPages.accountInformation" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accountInformation.aspx.cs" Inherits="StockApplication.page2.accountInformation" %>
 
 <!DOCTYPE html>
 

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StockApplication.MemberPages {
+namespace StockApplication.page3 {
     
     
-    public partial class accountInformation {
+    public partial class _default {
         
         /// <summary>
         /// form1 control.
@@ -31,6 +31,24 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.Label lbl_logged_in;
         
         /// <summary>
+        /// btn_ftrs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_ftrs;
+        
+        /// <summary>
+        /// btn_srv_dir control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_srv_dir;
+        
+        /// <summary>
         /// btn_logout control.
         /// </summary>
         /// <remarks>
@@ -49,58 +67,40 @@ namespace StockApplication.MemberPages {
         protected global::System.Web.UI.WebControls.LinkButton btn_stocks;
         
         /// <summary>
-        /// btn_srvc_dir control.
+        /// btn_account control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_srvc_dir;
+        protected global::System.Web.UI.WebControls.LinkButton btn_account;
         
         /// <summary>
-        /// btn_ftrs control.
+        /// lbl_add_staff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_ftrs;
+        protected global::System.Web.UI.WebControls.Label lbl_add_staff;
         
         /// <summary>
-        /// btn_stf_login control.
+        /// lbl_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_stf_login;
+        protected global::System.Web.UI.WebControls.Label lbl_username;
         
         /// <summary>
-        /// lbl_title control.
+        /// txt_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_title;
-        
-        /// <summary>
-        /// lbl_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_email;
-        
-        /// <summary>
-        /// txt_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txt_email;
+        protected global::System.Web.UI.WebControls.TextBox txt_username;
         
         /// <summary>
         /// lbl_pass control.
@@ -118,6 +118,24 @@ namespace StockApplication.MemberPages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txt_pass;
+        protected global::System.Web.UI.WebControls.TextBox txt_pass;
+        
+        /// <summary>
+        /// btn_add control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_add;
+        
+        /// <summary>
+        /// lbl_success control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_success;
     }
 }

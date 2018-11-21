@@ -1,13 +1,9 @@
 ﻿body {
-    background-image: url('../PublicPages/background_img.jpg');
+    background-image: url('background_img.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
-
-#div_center {
-    font-size: 24px;
 }
 
 #lbl_logged_in {
@@ -19,12 +15,13 @@
     font-size: 18px;
 }
 
-#lbl_mber_login_pg {
+#lbl_add_staff {
     background-color: darkorange;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    font-size: 24px;
 }
 
 #lbl_username {
@@ -43,36 +40,11 @@
     border-top-right-radius: 5px;
 }
 
-#chk_remember {
-    background-color: darkorange;
-}
-
-#lbl_remember {
+#lbl_success {
     background-color: darkorange;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    font-size:18px;
-}
-
-#chk_staff {
-    background-color: darkorange;
-}
-
-#lbl_staff {
-    background-color: darkorange;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    font-size: 18px;
-}
-
-#lbl_usrname {
-    background-color: darkorange;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    color:red;
 }

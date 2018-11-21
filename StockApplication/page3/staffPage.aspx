@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.StaffPages._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.page3._default" %>
 <link rel="stylesheet" runat="server" media="screen" href="staffPage.css" />
 <!DOCTYPE html>
 

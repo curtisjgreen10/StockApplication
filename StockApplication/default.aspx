@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="StockApplication.PublicPages._default" %>
-<%@ Register Src="~/page1/captcha.ascx" TagName="captcha" TagPrefix="user" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="StockApplication._default" %>
+<%@ Register Src="~/captcha.ascx" TagName="captcha" TagPrefix="user" %>
 <link rel="stylesheet" runat="server" media="screen" href="default.css" />
 
 <!DOCTYPE html "">

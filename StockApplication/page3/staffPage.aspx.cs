@@ -8,7 +8,7 @@ using EncryptDecrypt;
 using System.Security.Cryptography;
 using System.Threading;
 
-namespace StockApplication.StaffPages
+namespace StockApplication.page3
 {
     public partial class _default : System.Web.UI.Page
     {
@@ -19,7 +19,7 @@ namespace StockApplication.StaffPages
             lbl_logged_in.Visible = false;
             btn_account.Visible = false;
             btn_stocks.Visible = false;
-            if (Session["username"] != null)
+            if (Session["username"] != null && (bool)Session["staff"] == true)
             {
                 btn_account.Visible = true;
                 btn_stocks.Visible = true;
@@ -29,34 +29,40 @@ namespace StockApplication.StaffPages
                 lbl_logged_in.Visible = true;
                 lbl_logged_in.Text = "Logged in as staff: " + (string)Session["username"];
             }
+            else
+            {
+                //there is no staff member logged in and this page is trying to be loaded so re-direct
+                Response.Redirect("/login.aspx");
+            }
+
         }
 
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/features.aspx");
+            Response.Redirect("/features.aspx");
         }
 
         protected void btn_srv_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/serviceDirectory.aspx");
+            Response.Redirect("/serviceDirectory.aspx");
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session["staff"] = null;
             Session["username"] = null;
-            Response.Redirect("~/login.aspx");
+            Response.Redirect("/login.aspx");
         }
 
         protected void btn_stocks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/memberPage.aspx");
+            Response.Redirect("/page2/memberPage.aspx");
         }
 
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/accountInformation.aspx");
+            Response.Redirect("/page2/accountInformation.aspx");
         }
 
         protected void btn_add_Click(object sender, EventArgs e)

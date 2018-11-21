@@ -1,10 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="StockApplication.PublicPages.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="StockApplication.login" %>
 <link rel="stylesheet" runat="server" media="screen" href="login.css" />
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Stock Login</title>
+        <style type="text/css">
+        body {
+            background-image:url('background_img.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            background-position:center;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">

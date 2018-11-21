@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 
 
 
-namespace StockApplication.PublicPages
+namespace StockApplication
 {
     public partial class login : System.Web.UI.Page
     {
@@ -131,7 +131,7 @@ namespace StockApplication.PublicPages
                         Session["staff"] = false;
                     }
                     //Access member page if everything worked
-                    Response.Redirect("~/memberPage.aspx");
+                    Response.Redirect("/page2/memberPage.aspx");
                 }
                 else
                 {
@@ -157,7 +157,7 @@ namespace StockApplication.PublicPages
 
         protected void btn_sign_up_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("/default.aspx");
         }
 
         protected void btn_stf_login_Click(object sender, EventArgs e)
@@ -167,12 +167,12 @@ namespace StockApplication.PublicPages
 
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/serviceDirectory.aspx");
+            Response.Redirect("/serviceDirectory.aspx");
         }
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/features.aspx");
+            Response.Redirect("/features.aspx");
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
