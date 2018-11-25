@@ -9,12 +9,22 @@ namespace StockApplication.MemberPages
 {
     public partial class _default : System.Web.UI.Page
     {
+        //create proxy for web service
+        StockService.StockServiceClient proxy = new StockService.StockServiceClient();
+
+        /// <summary>
+        /// Event handler for account stock (member) page load. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             btn_stf_login.Visible = false;
-            if(Session["username"] != null)
+            //first check if anybody is loged in.
+            if (Session["username"] != null)
             {
-                if((bool)Session["staff"] == true)
+                //then check how they are logged in - staff or normal member.
+                if ((bool)Session["staff"] == true)
                 {
                     btn_stf_login.Visible = true;
                     lbl_logged_in.Text = "Logged in as staff: " + (string)Session["username"];
@@ -31,10 +41,13 @@ namespace StockApplication.MemberPages
             }
         }
 
+        /// <summary>
+        /// Event handler for get stock quote. Uses proxy to access we service.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_go_Click(object sender, EventArgs e)
         {
-            //create proxy
-            StockService.StockServiceClient proxy = new StockService.StockServiceClient();
             try
             {
                 //method call through proxy
@@ -56,6 +69,11 @@ namespace StockApplication.MemberPages
             }
         }
 
+        /// <summary>
+        /// Event handler for logout button. Clear session variables. Re-direct to login page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             btn_stf_login.Visible = false;
@@ -64,21 +82,41 @@ namespace StockApplication.MemberPages
             Response.Redirect("/login.aspx");
         }
 
+        /// <summary>
+        /// Event handler for account button. Re-direct to account page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_account_Click(object sender, EventArgs e)
         {
             Response.Redirect("/page2/accountInformation.aspx");
         }
 
+        /// <summary>
+        /// Event handler for service directory button. Re-direct to service directory page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
             Response.Redirect("/serviceDirectory.aspx");
         }
 
+        /// <summary>
+        /// Event handler for features button. Re-direct to features page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
             Response.Redirect("/features.aspx");
         }
 
+        /// <summary>
+        /// Event handler for staff page. Re-direct to staff page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_stf_login_Click(object sender, EventArgs e)
         {
             Response.Redirect("/page3/staffPage.aspx");

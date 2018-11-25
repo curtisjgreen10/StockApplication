@@ -12,21 +12,17 @@ namespace StockApplication.page3
 {
     public partial class _default : System.Web.UI.Page
     {
+        /// <summary>
+        /// Event handler for account staff page load. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             lbl_success.Visible = false;
-            btn_logout.Visible = false;
-            lbl_logged_in.Visible = false;
-            btn_account.Visible = false;
-            btn_stocks.Visible = false;
+            // check to make sure that the user is logged in and a staff member before loading this page.
             if (Session["username"] != null && (bool)Session["staff"] == true)
             {
-                btn_account.Visible = true;
-                btn_stocks.Visible = true;
-                btn_srv_dir.Visible = true;
-                btn_ftrs.Visible = true;
-                btn_logout.Visible = true;
-                lbl_logged_in.Visible = true;
                 lbl_logged_in.Text = "Logged in as staff: " + (string)Session["username"];
             }
             else
@@ -34,20 +30,33 @@ namespace StockApplication.page3
                 //there is no staff member logged in and this page is trying to be loaded so re-direct
                 Response.Redirect("/login.aspx");
             }
-
         }
 
-
+        /// <summary>
+        /// Event handler for features button. Re-direct to features page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
             Response.Redirect("/features.aspx");
         }
 
+        /// <summary>
+        /// Event handler for service directory button. Re-direct to service directory page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_srv_dir_Click(object sender, EventArgs e)
         {
             Response.Redirect("/serviceDirectory.aspx");
         }
 
+        /// <summary>
+        /// Event handler for logout button. Clear session variables. Re-direct to login page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session["staff"] = null;
@@ -55,16 +64,31 @@ namespace StockApplication.page3
             Response.Redirect("/login.aspx");
         }
 
+        /// <summary>
+        /// Event handler for stocks button. Re-direct to stocks page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_stocks_Click(object sender, EventArgs e)
         {
             Response.Redirect("/page2/memberPage.aspx");
         }
 
+        /// <summary>
+        /// Event handler for account button. Re-direct to account page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_account_Click(object sender, EventArgs e)
         {
             Response.Redirect("/page2/accountInformation.aspx");
         }
 
+        /// <summary>
+        /// Event handler to add staff members to the staff.xml file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_add_Click(object sender, EventArgs e)
         {
             int i;
@@ -108,7 +132,6 @@ namespace StockApplication.page3
             EncryptDecypt.writeXml(data, true);
             
             lbl_success.Visible = true;
-            
         }
     }
 }

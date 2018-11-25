@@ -13,7 +13,7 @@
 
             <span style="display:block; height: 10px; width: 10px;"></span>
             <span style="display:inline-block; width:10px;"></span>
-            <asp:Label ID="lbl_logged_in" runat="server" Visible ="false" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>
+            <asp:Label ID="lbl_logged_in" runat="server" Visible ="true" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>
 
             <div id="links" align="right">
             <span style="display:inline-block; width:50px;"></span>

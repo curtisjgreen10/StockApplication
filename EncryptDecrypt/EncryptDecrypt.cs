@@ -10,8 +10,18 @@ using System.Xml;
 
 namespace EncryptDecrypt
 {
+    /// <summary>
+    /// Class for Encrpyt and Decrypt methods
+    /// </summary>
     public class EncryptDecypt
     {
+        /// <summary>
+        /// Method for encrypting a string using C# AES library.
+        /// </summary>
+        /// <param name="plainText">text to be encrypted</param>
+        /// <param name="Key">generated key</param>
+        /// <param name="IV"></param>
+        /// <returns></returns>
         public static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
         {
             // Check arguments.
@@ -51,6 +61,13 @@ namespace EncryptDecrypt
             return encrypted;
         }
 
+        /// <summary>
+        /// Method to decrypt text back into human readable form.
+        /// </summary>
+        /// <param name="cipherText"></param>
+        /// <param name="Key"></param>
+        /// <param name="IV"></param>
+        /// <returns></returns>
         public static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
         {
             // Check arguments.
@@ -89,27 +106,30 @@ namespace EncryptDecrypt
                         }
                     }
                 }
-
             }
-
             return plaintext;
-
         }
 
         /// <summary>
-        /// write the username and password to xml file.  
+        /// Write member data to xml. 
+        /// memberData[0] -> username
+        /// memberData[1] -> password
+        /// memberData[2] -> key
+        /// memberData[3] -> iv
         /// </summary>
-        /// <param name="username">usename of member</param>
-        /// <param name="encryptedPass"> password of member</param>
+        /// <param name="memberData"></param>
+        /// <param name="staff"></param>
         public static void writeXml(string[] memberData, bool staff)
         {
             string root = "Members";
             string filename = "Member.xml";
 
+            //write to staff file if true
             if (staff)
                 filename = "Staff.xml";
 
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
+            //if file exists then append the data
             if (File.Exists(path))
             {
                 
@@ -127,6 +147,7 @@ namespace EncryptDecrypt
             }
             else
             {
+                //if the file does not exist then write header information as if file is blank.
                 XmlTextWriter writer = null;
                 try
                 {
@@ -156,16 +177,25 @@ namespace EncryptDecrypt
             }
         }
 
+        /// <summary>
+        /// Retrieve member data given the username.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="staff"></param>
+        /// <returns></returns>
         public static string[] readXml(string username, bool staff)
         {
             string[] memberData = new string[3];
             string filename = "Member.xml";
+
+            // read from staff file if true
             if (staff)
                 filename = "Staff.xml";
 
             XmlTextReader reader = null;
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
 
+            //check if file exist, if not, we cannot read.
             if (File.Exists(path))
             {
                 try
