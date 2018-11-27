@@ -10,6 +10,7 @@ namespace StockApplication
 {
     public partial class exchange : System.Web.UI.Page
     {
+        
         //create dictionary for string to symbols
         Dictionary<string, string> currencies = new Dictionary<string, string>();
         //create proxy for web service
@@ -17,7 +18,6 @@ namespace StockApplication
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             btn_stf_login.Visible = false;
             //first check if anybody is loged in.
             
@@ -50,24 +50,26 @@ namespace StockApplication
         protected void btn_calculate_Click(object sender, EventArgs e)
         {
             //clear error labels
-            txt_from_amt.Text = "";
-            lbl_select_curr_error.Text = "";
+            lbl_from_error.Text = "";
             //check for errors
-            if (txt_from_amt == null)
+            if (txt_from_amt.Text == null || txt_from_amt.Text.Equals(""))
             {
                 lbl_from_error.Text = "Enter dollar amount to convert";
                 return;
             }
-            if (txt_chosen_curr_from == null || txt_chosen_curr_to == null)
+            //no errors so run conversion
+            currencies.TryGetValue(cb_from_symbol.SelectedValue, out string from_sym);
+            currencies.TryGetValue(cb_to_symbol.SelectedValue, out string to_sym);
+            double rate = proxy.queryRate(from_sym, to_sym);
+            try
             {
-                lbl_select_curr_error.Text = "Choose currencies to convert"; 
+                rate = rate * Convert.ToDouble(txt_from_amt.Text);
+            }
+            catch (Exception)
+            {
+                lbl_from_error.Text = "Irregular input try again";
                 return;
             }
-            //no errors so run conversion
-            currencies.TryGetValue(txt_chosen_curr_from.Text, out string from_sym);
-            currencies.TryGetValue(txt_chosen_curr_to.Text, out string to_sym);
-            double rate = proxy.queryRate(from_sym, to_sym);
-            rate = rate * Convert.ToDouble(txt_from_amt.Text);
             txt_result.Text = rate.ToString();
         }
 
@@ -82,8 +84,8 @@ namespace StockApplication
             //use dictionary to populate list boxes
             foreach (KeyValuePair<string, string> entry in currencies)
             {
-                lst_from_symbol.Items.Add(entry.Key);
-                lst_to_symbol.Items.Add(entry.Key);
+                cb_from_symbol.Items.Add(entry.Key);
+                cb_to_symbol.Items.Add(entry.Key);
             }
         }
 

@@ -22,15 +22,6 @@ namespace StockApplication {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
         /// lbl_logged_in control.
         /// </summary>
         /// <remarks>
@@ -148,58 +139,22 @@ namespace StockApplication {
         protected global::System.Web.UI.WebControls.Label lbl_from_error;
         
         /// <summary>
-        /// lst_from_symbol control.
+        /// cb_from_symbol control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lst_from_symbol;
+        protected global::System.Web.UI.WebControls.DropDownList cb_from_symbol;
         
         /// <summary>
-        /// lst_to_symbol control.
+        /// cb_to_symbol control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lst_to_symbol;
-        
-        /// <summary>
-        /// UpdatePanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
-        /// <summary>
-        /// txt_chosen_curr_from control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_chosen_curr_from;
-        
-        /// <summary>
-        /// txt_chosen_curr_to control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_chosen_curr_to;
-        
-        /// <summary>
-        /// lbl_select_curr_error control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_select_curr_error;
+        protected global::System.Web.UI.WebControls.DropDownList cb_to_symbol;
         
         /// <summary>
         /// btn_calculate control.

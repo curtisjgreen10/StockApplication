@@ -17,6 +17,8 @@ namespace StockApplication
         static int count = 0;
         static private object Lock = new object();
 
+        public static string GlobalUsername { get; set; } = null;
+
         protected void Application_Start(object sender, EventArgs e)
         {
 
@@ -149,5 +151,11 @@ namespace StockApplication
                 }
             }
         }
+    }
+
+    public static class GlobalVariables
+    {
+        //help persist username through page refresh
+        public static string GlobalUsername { get; set; }
     }
 }

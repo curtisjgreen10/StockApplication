@@ -21,8 +21,11 @@ namespace StockApplication
         {
             btn_stf_login.Visible = false;
             //first check if anybody is loged in.
-            if (Session["username"] != null)
+            if (Session["username"] != null || Global.GlobalUsername != null)
             {
+                //ensure these are in sync in this order for persisting through page refresh.
+                Global.GlobalUsername = (string)Session["username"];
+                Session["username"] = Global.GlobalUsername;
                 //then check how they are logged in - staff or normal member.
                 if ((bool)Session["staff"] == true)
                 {
