@@ -6,11 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using EncryptDecrypt;
 using System.Security.Cryptography;
-using System.Threading;
+using System.IO;
+using System.Xml.Linq;
+using System.Xml;
 
-namespace StockApplication.page3
+namespace StockApplication
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class staffPage : System.Web.UI.Page
     {
         /// <summary>
         /// Event handler for account staff page load. 
@@ -19,7 +21,6 @@ namespace StockApplication.page3
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl_success.Visible = false;
             // check to make sure that the user is logged in and a staff member before loading this page.
             if (Session["username"] != null && (bool)Session["staff"] == true)
             {
@@ -28,7 +29,7 @@ namespace StockApplication.page3
             else
             {
                 //there is no staff member logged in and this page is trying to be loaded so re-direct
-                Response.Redirect("/login.aspx");
+                Response.Redirect("~/login.aspx");
             }
         }
 
@@ -39,7 +40,7 @@ namespace StockApplication.page3
         /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/features.aspx");
+            Response.Redirect("~/features.aspx");
         }
 
         /// <summary>
@@ -49,7 +50,7 @@ namespace StockApplication.page3
         /// <param name="e"></param>
         protected void btn_srv_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         /// <summary>
@@ -61,7 +62,7 @@ namespace StockApplication.page3
         {
             Session["staff"] = null;
             Session["username"] = null;
-            Response.Redirect("/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
         /// <summary>
@@ -71,7 +72,7 @@ namespace StockApplication.page3
         /// <param name="e"></param>
         protected void btn_stocks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/memberPage.aspx");
+            Response.Redirect("~/stockPage.aspx");
         }
 
         /// <summary>
@@ -81,7 +82,7 @@ namespace StockApplication.page3
         /// <param name="e"></param>
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/accountInformation.aspx");
+            Response.Redirect("~/accountInformation.aspx");
         }
 
         /// <summary>
@@ -130,8 +131,55 @@ namespace StockApplication.page3
             data[1] = strEncrypted;
 
             EncryptDecypt.writeXml(data, true);
-            
-            lbl_success.Visible = true;
+        }
+
+        protected void btn_staff_query_Click(object sender, EventArgs e)
+        {
+            List<string> usernames = readStaffUsernames();
+            foreach (var user in usernames)
+            {
+                lst_staf_users.Items.Add(user);
+            }
+        }
+
+        private List<string> readStaffUsernames()
+        {
+            List<string> usernames = new List<string>();
+            XmlTextReader reader = null;
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "staff.xml");
+
+            //check if file exist, if not, we cannot read.
+            if (File.Exists(path))
+            {
+                try
+                {
+                    reader = new XmlTextReader(path);
+                    reader.WhitespaceHandling = WhitespaceHandling.None;
+                    while (reader.Read())
+                    {
+                        if (reader.HasAttributes)
+                        {
+                            if (reader.AttributeCount > 2)
+                            {
+                                usernames.Add(reader.GetAttribute(0));
+                            }
+                        }
+                    }
+                    return usernames;
+                }
+                finally
+                {
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
+                }
+            }
+            else
+            {
+                usernames[0] = "FILE NOT FOUND";
+                return usernames;
+            }
         }
     }
 }

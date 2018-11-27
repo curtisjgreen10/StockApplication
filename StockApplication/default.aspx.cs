@@ -42,7 +42,7 @@ namespace StockApplication
         protected void btn_login_Click(object sender, EventArgs e)
         {
             //Show login page 
-            Response.Redirect("/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace StockApplication
             EncryptDecypt.writeXml(data, false);
             Session["username"] = data[0];
             Session["staff"] = false;
-            Response.Redirect("/page2/memberPage.aspx");
+            Response.Redirect("~/stockPage.aspx");
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/features.aspx");
+            Response.Redirect("~/features.aspx");
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_stocks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/memberPage.aspx");
+            Response.Redirect("~/stockPage.aspx");
         }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/accountInformation.aspx");
+            Response.Redirect("~/accountInformation.aspx");
         }
     }
 }

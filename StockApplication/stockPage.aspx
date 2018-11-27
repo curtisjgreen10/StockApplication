@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="memberPage.aspx.cs" Inherits="StockApplication.MemberPages._default" %>
-<link rel="stylesheet" runat="server" media="screen" href="memberPage.css" />
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="stockPage.aspx.cs" Inherits="StockApplication.stockPage" %>
+<link rel="stylesheet" runat="server" media="screen" href="stockPage.css" />
 
 <!DOCTYPE html>
 
@@ -22,6 +22,9 @@
             <asp:LinkButton ID="btn_account"  runat="server" Text="Account Info"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_account_Click" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
             <span style="display:block; height: 5px; width: 50px;"></span>
+            <asp:LinkButton ID="btn_exchange"  runat="server" Text="Exchange Rates"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_exchange_Click" ></asp:LinkButton>
+            <span style="display:inline-block; width:50px;"></span>
+            <span style="display:block; height: 5px; width: 50px;"></span>
             <asp:LinkButton ID="btn_srvc_dir"  runat="server" Text="Service Directory"  style="background-color:darkorange"  BorderColor="Yellow" BorderStyle="Solid" OnClick="btn_srvc_dir_Click" ></asp:LinkButton>
             <span style="display:inline-block; width:50px;"></span>
             <span style="display:block; height: 5px; width: 50px;"></span>
@@ -42,7 +45,7 @@
             <span style="display:inline-block; width:49px;"></span>
             <asp:Label ID="lbl_symbol" Text="Symbol:" runat="server" Width="70px" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>
             <span style="display:inline-block; width:24px;"></span>
-            <asp:TextBox ID="txt_symbol" runat="server" Width="200px" Height="16px"></asp:TextBox>
+            <asp:TextBox ID="txt_symbol" runat="server" Width="200px" Height="16px" BorderColor="Yellow" BorderStyle="Solid"></asp:TextBox>
             <span style="display:block; height: 30px; width: 50px;"></span>
             <span style="display:inline-block; width:50px;"></span>
             <asp:Label ID="lbl_open" Text="Open:" runat="server" Width="70px" BorderColor="Yellow" BorderStyle="Solid" ></asp:Label>

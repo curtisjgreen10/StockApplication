@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="features.aspx.cs" Inherits="StockApplication.PublicPages.features" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="features.aspx.cs" Inherits="StockApplication.features" %>
 
 <!DOCTYPE html>
 
@@ -68,22 +68,11 @@
             <asp:Label ID="Label1" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Request a stock quote"></asp:Label> 
             <span style="display:block; height: 10px; width: 10px;"></span>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label2" Font-Size="18px" runat="server" style="background-color:darkorange" Text="More features to come"></asp:Label>  
+            <asp:Label ID="Label2" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Get currency exchange rates of physical currency"></asp:Label>  
             <span style="display:block; height: 10px; width: 10px;"></span>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label3" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Feature here"></asp:Label>  
+            <asp:Label ID="Label3" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Get currency exchange rates of digital currency"></asp:Label>  
             <span style="display:block; height: 10px; width: 10px;"></span>
-            <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label4" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Feature here "></asp:Label>  
-            <span style="display:block; height: 10px; width: 10px;"></span>
-            <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label17" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Feature here"></asp:Label>  
-            <span style="display:block; height: 10px; width: 10px;"></span>
-            <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label18" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Feature here "></asp:Label>  
-            <span style="display:block; height: 25px; width: 10px;"></span>
-
-
         </div>
     </form>
 </body>

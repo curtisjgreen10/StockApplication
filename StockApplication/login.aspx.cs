@@ -143,7 +143,7 @@ namespace StockApplication
                         Session["staff"] = false;
                     }
                     //Access member page if everything worked
-                    Response.Redirect("/page2/memberPage.aspx");
+                    Response.Redirect("~/stockPage.aspx");
                 }
                 else
                 {
@@ -179,7 +179,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_sign_up_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/default.aspx");
+            Response.Redirect("~/default.aspx");
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         /// <summary>
@@ -199,11 +199,11 @@ namespace StockApplication
         /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/features.aspx");
+            Response.Redirect("~/features.aspx");
         }
 
         /// <summary>
-        /// Event handler for logout button. Clear session variables. Re-direct to login page.
+        /// Event handler for logout button. Clear session variables.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

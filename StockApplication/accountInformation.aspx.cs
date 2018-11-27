@@ -5,15 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace StockApplication.MemberPages
+namespace StockApplication
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class accountInformation : System.Web.UI.Page
     {
-        //create proxy for web service
-        StockService.StockServiceClient proxy = new StockService.StockServiceClient();
-
         /// <summary>
-        /// Event handler for account stock (member) page load. 
+        /// Event handler for account information page load. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -23,6 +20,7 @@ namespace StockApplication.MemberPages
             //first check if anybody is loged in.
             if (Session["username"] != null)
             {
+                txt_email.Text = (string)Session["username"];
                 //then check how they are logged in - staff or normal member.
                 if ((bool)Session["staff"] == true)
                 {
@@ -37,35 +35,7 @@ namespace StockApplication.MemberPages
             else
             {
                 //if session is null this page is trying to be loaded with no login so re-direct
-                Response.Redirect("/login.aspx");
-            }
-        }
-
-        /// <summary>
-        /// Event handler for get stock quote. Uses proxy to access we service.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void btn_go_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //method call through proxy
-                proxy.StockBuild("does not matter");
-                string data = proxy.StockQuote(txt_symbol.Text);
-                string[] stats = data.Split(',');
-                lbl_open_price.Text = "$" + stats[0];
-                lbl_high_price.Text = "$" + stats[1];
-                lbl_low_price.Text = "$" + stats[2];
-                lbl_close_price.Text = "$" + stats[3];
-            }
-            catch (Exception ex)
-            {
-                //display any exception messages in txt_open text box
-                lbl_open_price.Text = "no data or invalid stock or other error";
-                lbl_high_price.Text = "";
-                lbl_low_price.Text = "";
-                lbl_close_price.Text = "";
+                Response.Redirect("~/login.aspx");
             }
         }
 
@@ -79,17 +49,17 @@ namespace StockApplication.MemberPages
             btn_stf_login.Visible = false;
             Session["username"] = null;
             Session["staff"] = null;
-            Response.Redirect("/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
         /// <summary>
-        /// Event handler for account button. Re-direct to account page.
+        /// Event handler for stocks button. Re-direct to stocks page.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void btn_account_Click(object sender, EventArgs e)
+        protected void btn_stocks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/accountInformation.aspx");
+            Response.Redirect("~/stockPage.aspx");
         }
 
         /// <summary>
@@ -99,7 +69,7 @@ namespace StockApplication.MemberPages
         /// <param name="e"></param>
         protected void btn_srvc_dir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/serviceDirectory.aspx");
+            Response.Redirect("~/serviceDirectory.aspx");
         }
 
         /// <summary>
@@ -109,7 +79,7 @@ namespace StockApplication.MemberPages
         /// <param name="e"></param>
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/features.aspx");
+            Response.Redirect("~/features.aspx");
         }
 
         /// <summary>
@@ -119,7 +89,7 @@ namespace StockApplication.MemberPages
         /// <param name="e"></param>
         protected void btn_stf_login_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page3/staffPage.aspx");
+            Response.Redirect("~/staffPage.aspx");
         }
     }
 }

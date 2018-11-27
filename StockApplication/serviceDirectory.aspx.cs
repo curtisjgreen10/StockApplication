@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace StockApplication.PublicPages
+namespace StockApplication
 {
     public partial class serviceDirectory : System.Web.UI.Page
     {
@@ -38,22 +38,22 @@ namespace StockApplication.PublicPages
 
         protected void btn_sign_up_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/default.aspx");
+            Response.Redirect("~/default.aspx");
         }
 
         protected void btn_mber_login_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
         protected void btn_stf_login_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page3/staffPage.aspx");
+            Response.Redirect("~/staffPage.aspx");
         }
 
         protected void btn_ftrs_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/features.aspx");
+            Response.Redirect("~/features.aspx");
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
@@ -67,17 +67,17 @@ namespace StockApplication.PublicPages
             btn_stocks.Visible = false;
             btn_mber_login.Visible = false;
             btn_stf_login.Visible = false;
-            Response.Redirect("/login.aspx");
+            Response.Redirect("~/login.aspx");
         }
 
         protected void btn_stocks_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/memberPage.aspx");
+            Response.Redirect("~/stockPage.aspx");
         }
 
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/page2/accountInformation.aspx");
+            Response.Redirect("~/accountInformation.aspx");
         }
     }
 }

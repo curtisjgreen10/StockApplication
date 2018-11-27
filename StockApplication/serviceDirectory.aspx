@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="serviceDirectory.aspx.cs" Inherits="StockApplication.PublicPages.serviceDirectory" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="serviceDirectory.aspx.cs" Inherits="StockApplication.serviceDirectory" %>
 
 <!DOCTYPE html>
 
@@ -88,6 +88,33 @@
 
 
 
+
+            <span style="display:block; height: 25px; width: 10px;"></span>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label39" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Component Type: Web service"></asp:Label> 
+            </br>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label40" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Service Provider: Curtis Green"></asp:Label>  
+            </br>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label41" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Operation Name: Currency Exchange Rate Service"></asp:Label>  
+            </br>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label42" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Description: Retrieves exchange rates between different currencies given a dollar amount"></asp:Label>  
+            </br>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label43" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Parameters: Dollar amount and currency selections"></asp:Label>  
+            </br>
+            <span style="display:inline-block; width:50px;"></span>
+            <asp:Label ID="Label44" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Tryit Link:"></asp:Label>
+            <a href="http://webstrar42.fulton.asu.edu/page1/default.aspx">This website</a>
+            <asp:Label ID="Label45" Font-Size="18px" runat="server" style="background-color:darkorange" Text="create an account or log in to try anything"></asp:Label>
+            <span style="display:block; height: 25px; width: 10px;"></span>
+
+
+
+
+
             <span style="display:block; height: 25px; width: 10px;"></span>
             <span style="display:inline-block; width:50px;"></span>
             <asp:Label ID="Label5" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Component Type: Global.asax"></asp:Label> 
@@ -96,16 +123,16 @@
             <asp:Label ID="Label6" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Service Provider: Curtis Green"></asp:Label>  
             </br>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label7" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Operation Name: TODO"></asp:Label>  
+            <asp:Label ID="Label7" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Operation Name: Session start event"></asp:Label>  
             </br>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label8" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Description: TODO "></asp:Label>  
+            <asp:Label ID="Label8" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Description: The session start event is being used to track number of visitors in a file"></asp:Label>  
             </br>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label19" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Parameters: TODO "></asp:Label>  
+            <asp:Label ID="Label19" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Parameters: None "></asp:Label>  
             </br>
             <span style="display:inline-block; width:50px;"></span>
-            <asp:Label ID="Label20" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Tryit Link: TODO "></asp:Label>  
+            <asp:Label ID="Label20" Font-Size="18px" runat="server" style="background-color:darkorange" Text="Tryit Link: Since you are viewing this page, the event has been triggered."></asp:Label>  
             <span style="display:block; height: 25px; width: 10px;"></span>
 
 

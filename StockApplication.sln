@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockApplication", "StockApplication\StockApplication.csproj", "{7EE46BFF-FBB4-481F-82E0-D17D6B7F9131}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3FF74E98-5C8B-4CE3-AC71-BC2354492069} = {3FF74E98-5C8B-4CE3-AC71-BC2354492069}
+		{3CAECEB6-2021-408F-B8A7-8F6608E21002} = {3CAECEB6-2021-408F-B8A7-8F6608E21002}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptDecrypt", "EncryptDecrypt\EncryptDecrypt.csproj", "{6B89E018-E588-4623-83CD-DC9BC2092F40}"
@@ -31,6 +32,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockService", "StockServic
 		SlnRelativePath = "StockService\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CryptoStockService", "CryptoStockService\", "{3CAECEB6-2021-408F-B8A7-8F6608E21002}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57370"
+		Debug.AspNetCompiler.PhysicalPath = "CryptoStockService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57370\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57370"
+		Release.AspNetCompiler.PhysicalPath = "CryptoStockService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57370\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57370"
+		SlnRelativePath = "CryptoStockService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +72,10 @@ Global
 		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3FF74E98-5C8B-4CE3-AC71-BC2354492069}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3CAECEB6-2021-408F-B8A7-8F6608E21002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAECEB6-2021-408F-B8A7-8F6608E21002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CAECEB6-2021-408F-B8A7-8F6608E21002}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAECEB6-2021-408F-B8A7-8F6608E21002}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

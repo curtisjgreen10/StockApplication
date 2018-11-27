@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.page3._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="staffPage.aspx.cs" Inherits="StockApplication.staffPage" %>
 <link rel="stylesheet" runat="server" media="screen" href="staffPage.css" />
 <!DOCTYPE html>
 
@@ -47,9 +47,18 @@
             <asp:TextBox ID="txt_pass" runat="server" Width="220px"  TextMode="Password" ></asp:TextBox>
             <span style="display:block; height: 23px; width: 50px;"></span>
             <asp:Button ID="btn_add"  runat="server" Text="Add Staff Member"  Height="44px" Width="139px" OnClick="btn_add_Click"  ></asp:Button>
-            <asp:Label ID="lbl_success" runat="server"  Text="Staff Added!"  BorderColor="Yellow" BorderStyle="Solid"></asp:Label> 
+            <span style="display:block; height: 51px; width: 50px;"></span>
+            </div>
+
+            <div>
+            <span style="display:inline-block; width:75px;"></span>
+            <asp:Button ID="btn_staff_query"  runat="server" Text="Query Staff Member List"  Height="44px" Width="185px" OnClick="btn_staff_query_Click"  ></asp:Button>
             <span style="display:block; height: 5px; width: 50px;"></span>
-        </div>
+            <span style="display:inline-block; width:75px;"></span>
+            <asp:ListBox id="lst_staf_users" style="Z-INDEX: 101; LEFT: 301px; OVERFLOW:scroll;  TOP: 286px; " runat="server" TextMode="MultiLine" Height="321px" Width="182px" ></asp:ListBox>
+            </div>
+
+
     </form>
 </body>
 </html>
